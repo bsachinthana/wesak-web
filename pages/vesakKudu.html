@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-image: url("../img/bg_vesakKudu.png");
+      background-size: 100% 100%;
+    }
+
+    .grid {
+      margin-left: 10%;
+      margin-right: 2%;
+      /* margin-top: 3%; */
+    }
+
+    /* item is invisible, but used for layout */
+    .grid-item,
+    .grid-sizer {
+      width: 18%;
+    }
+
+    .grid-item {
+      float: left;
+      height: 207px;
+    }
+
+    /* grid-item-content is visible, and transitions size */
+    .grid-item-content {
+      width: 100%;
+      height: 100%;
+      border: 2px solid #333;
+      border-color: hsla(0, 0%, 0%, 0.5);
+      border-radius: 5px;
+      -webkit-transition: width 0.4s, height 0.4s;
+      transition: width 0.4s, height 0.4s;
+    }
+
+    .grid-item:hover .grid-item-content {
+      border-color: white;
+      cursor: pointer;
+    }
+
+    /* both item and item content change size */
+    .grid-item.is-expanded {
+      width: 54%;
+      height: 414px;
+      z-index: 2;
+    }
+
+    .grid-item.is-expanded .grid-item-content {
+      background: #F90;
+    }
+
+    div.image,
+    div.image2,
+    div.image4,
+    div.image6,
+    div.image8,
+    div.image10,
+    div.image12,
+    div.image14 {
+
+      content: url("../img/l12.png");
+    }
+
+    div.image1,
+    div.image3,
+    div.image5,
+    div.image7,
+    div.image9,
+    div.image11,
+    div.image13 {
+
+      content: url("../img/l22.jpg");
+    }
+
+    .content {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 620px) {
+
+      /* For mobile phones: */
+      .grid-item {
+        width: 100%;
+      }
+
+      .grid {
+      margin-left: 0px;
+      margin-right: 0px;
+      /* margin-top: 3%; */
+    }
+      #title {
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .is-expanded {
+        width: 100% !important;
+        height: 203px !important;
+        z-index: 2;
+      }
+
+      body {
+        font-family: sans-serif;
+        background-image: url("../img/bg_vesakKudu.png");
+        background-size: cover;
+      }
+
+      #rotatedRectangle
+      {
+        height: 278px !important;
+      }
+
+
+    }
+    .borderSpam
+    {
+      z-index: -1;
+    }
+
+
+
+    .box {
+      transform: translate(-3%, 7%);
+      background: #ffffffa6;
+      box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgb(193 189 49);
+      border: 2px solid #ffc107;
+      color: white;
+    }
+
+    .box:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      /* left:-100%; */
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      transition: 0.5s;
+      pointer-events: none;
+    }
+
+    .box:hover:before {
+      /* left:-50%; */
+      transform: skewX(-5deg);
+    }
+
+
+    .box .content {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border: 1px solid #f0a591;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(9, 0, 0, 0.5);
+
+    }
+
+    .box span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      box-sizing: border-box;
+
+    }
+.box:hover {
+  opacity: 1;
+  background-color: rgb(226, 226, 238);
+  }
+    .box span:nth-child(1) {
+      transform: rotate(0deg);
+    }
+
+    .box span:nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+    .box span:nth-child(3) {
+      transform: rotate(180deg);
+    }
+
+    .box span:nth-child(4) {
+      transform: rotate(270deg);
+    }
+
+    .box span:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #50c5df;
+      animation: animate 4s linear infinite;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+      50% {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      50.1% {
+        transform: scaleX(1);
+        transform-origin: right;
+
+      }
+
+      100% {
+        transform: scaleX(0);
+        transform-origin: right;
+
+      }
+    }
+  </style>
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+  <div class="container-fluid min-vh-100 padding d-flex flex-column">
+    <div class="row ">
+
+      <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+        <a class="navbar-brand" href="../index.html"><img src="../img/home_icon.png" height="40px" width="40px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" style="flex-grow: inherit;" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+            <li class="nav-item" style="margin-right: 14px;">
+              <div class="box">
+                <span class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./vesakThorana.html">වෙසක් තොරණ</a>
+              </div>
+            </li>
+            <li class="nav-item" style="margin-right: 14px;">
+              <div class="box">
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./vesakPaniwida.html">වෙසක් පණිවිඩ</a>
+              </div>
+            </li>
+            <li class="nav-item" style="margin-right: 14px;">
+              <div class="box"  style="background-color: rgb(142, 211, 159);">
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./vesakKudu.html">වෙසක් කුඩු</a>
+              </div>
+            </li>
+            <li class="nav-item" style="margin-right: 14px; pointer-events: auto">
+              <div class="box">
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./vesakNirmana.html">වෙසක් නිර්මාණ</a>
+              </div>
+            </li>
+            <li class="nav-item" style="margin-right: 14px;">
+              <div class="box">
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <span  class="borderSpam"></span>
+                <span  class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./vesakBathiGee.html">වෙසක් බැතිගී</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col-12 wrapper">
+        <!-- Demo header-->
+        <div class="row">
+          <img id="title" src="../img/title_vesakKudu.png">
+        </div>
+
+
+        <div class="grid backgrd1">
+          <div class="grid-sizer"></div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l12.png" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <img src="../img/l22.jpg" style="height: 100%; width: 100%;">
+              <div class="content image-title">
+                <h1 style="font-size: medium;">Hashani Ruberu</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script>
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+
+    $grid.on('click', '.grid-item-content', function () {
+
+      var itemContent = this;
+      setItemContentPixelSize(itemContent);
+
+      var itemElem = itemContent.parentNode;
+      $(itemElem).toggleClass('is-expanded');
+
+      // force redraw
+      var redraw = itemContent.offsetWidth;
+      // renable default transition
+      itemContent.style[transitionProp] = '';
+
+      addTransitionListener(itemContent);
+      setItemContentTransitionSize(itemContent, itemElem);
+
+      $grid.masonry();
+    });
+
+    var docElem = document.documentElement;
+    var transitionProp = typeof docElem.style.transition == 'string' ?
+      'transition' : 'WebkitTransition';
+    var transitionEndEvent = {
+      WebkitTransition: 'webkitTransitionEnd',
+      transition: 'transitionend'
+    }[transitionProp];
+
+    function setItemContentPixelSize(itemContent) {
+      var previousContentSize = getSize(itemContent);
+      // disable transition
+      itemContent.style[transitionProp] = 'none';
+      // set current size in pixels
+      itemContent.style.width = previousContentSize.width + 'px';
+      itemContent.style.height = previousContentSize.height + 'px';
+    }
+
+    function addTransitionListener(itemContent) {
+      // reset 100%/100% sizing after transition end
+      var onTransitionEnd = function () {
+        itemContent.style.width = '';
+        itemContent.style.height = '';
+        itemContent.removeEventListener(transitionEndEvent, onTransitionEnd);
+      };
+      itemContent.addEventListener(transitionEndEvent, onTransitionEnd);
+    }
+
+    function setItemContentTransitionSize(itemContent, itemElem) {
+      // set new size
+      var size = getSize(itemElem);
+      itemContent.style.width = size.width + 'px';
+      itemContent.style.height = size.height + 'px';
+      //itemContent.childNodes[3].childNodes[0].style.height = (size.height * 0.09) + '%';
+
+    }
+
+    $(document).ready(function () {
+
+      var divHeight = $('.box').width();
+      $('span#rotatedRectangle').each(function () {
+       
+        var selfP = $(this)[0].offsetParent.offsetWidth;
+        var self = $(this);
+
+        self.height(selfP-4);
+
+      });
+
+    });
+
+
+  </script>
+</body>
+
+</html>

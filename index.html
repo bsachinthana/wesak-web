@@ -110,15 +110,226 @@
 				background: url("bg.jpg");
 				background-size: cover;
 			}
+
+
+      .borderSpam
+    {
+      z-index: -1;
+    }
+
+
+
+    .box {
+      transform: translate(-3%, 7%);
+      background: #ffffffa6;
+      box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgb(49 180 193);
+      border: 2px solid #73e4cf;
+      color: white;
+    }
+
+    .box:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      /* left:-100%; */
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      transition: 0.5s;
+      pointer-events: none;
+    }
+
+    .box:hover:before {
+      /* left:-50%; */
+      transform: skewX(-5deg);
+    }
+
+
+    .box .content {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border: 1px solid #f0a591;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(9, 0, 0, 0.5);
+
+    }
+
+    .box span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      box-sizing: border-box;
+
+    }
+.box:hover {
+  opacity: 1;
+  background-color: rgb(226, 226, 238);
+  }
+    .box span:nth-child(1) {
+      transform: rotate(0deg);
+    }
+
+    .box span:nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+    .box span:nth-child(3) {
+      transform: rotate(180deg);
+    }
+
+    .box span:nth-child(4) {
+      transform: rotate(270deg);
+    }
+
+    .box span:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #52b668;
+      animation: animate 4s linear infinite;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+      50% {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      50.1% {
+        transform: scaleX(1);
+        transform-origin: right;
+
+      }
+
+      100% {
+        transform: scaleX(0);
+        transform-origin: right;
+
+      }
+    }
+
+    @media only screen and (max-width: 620px) {
+
+
+#title {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.is-expanded {
+  width: 100% !important;
+  height: 203px !important;
+  z-index: 2;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url("../img/bg_vesakKudu.png");
+  background-size: cover;
+}
+
+#rotatedRectangle
+{
+  height: 278px !important;
+}
+
+
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
 		</style>
 		<title>Hello, world!</title>
 	</head>
 
 	<body>
+    <video autoplay muted loop id="myVideo">
+      <source src="./img/bg_video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
 		<div class="container-fluid min-vh-100 padding d-flex flex-column">
-			<div class="row">
-				<div class="col header"></div>
-			</div>
+      
+			<div class="row ">
+
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+          <a class="navbar-brand" href="../index.html"><img src="./img/home_icon.png" height="40px" width="40px"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" style="flex-grow: inherit;" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+              <li class="nav-item" style="margin-right: 14px;">
+                <div class="box">
+                  <span class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <a class="nav-link" href="./pages/vesakThorana.html">වෙසක් තොරණ</a>
+                </div>
+              </li>
+              <li class="nav-item" style="margin-right: 14px;">
+                <div class="box">
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <a class="nav-link" href="./pages/vesakPaniwida.html">වෙසක් පණිවිඩ</a>
+                </div>
+              </li>
+              <li class="nav-item" style="margin-right: 14px;">
+                <div class="box">
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <a class="nav-link" href="./pages/vesakKudu.html">වෙසක් කුඩු</a>
+                </div>
+              </li>
+              <li class="nav-item" style="margin-right: 14px; pointer-events: auto">
+                <div class="box">
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <a class="nav-link" href="./pages/vesakNirmana.html">වෙසක් නිර්මාණ</a>
+                </div>
+              </li>
+              <li class="nav-item" style="margin-right: 14px;">
+                <div class="box">
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <span  class="borderSpam"></span>
+                  <span  class="borderSpam" id="rotatedRectangle"></span>
+                  <a class="nav-link" href="./pages/vesakBathiGee.html">වෙසක් බැතිගී</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 			<div class="row flex-grow-1 wrapper-row">
 				<div
 					id="wrapperDiv"
@@ -195,7 +406,7 @@
 			integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
 			crossorigin="anonymous"
 		></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			function calcHexDimms() {
 				var wrapper = document.getElementById("wrapperDiv");
@@ -236,5 +447,20 @@
 			};
 			window.onload = setTimeout(calcHexDimms, 100);
 		</script>
+    <script>
+        $(document).ready(function () {
+
+var divHeight = $('.box').width();
+$('span#rotatedRectangle').each(function () {
+ 
+  var selfP = $(this)[0].offsetParent.offsetWidth;
+  var self = $(this);
+
+  self.height(selfP-4);
+
+});
+
+});
+    </script>
 	</body>
 </html>
