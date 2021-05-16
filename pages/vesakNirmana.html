@@ -458,7 +458,7 @@
       var divHeight = $('.box').width();
       $('span#rotatedRectangle').each(function () {
 
-        var selfP = $(this)[0].offsetParent.offsetWidth;
+        var selfP = $(this)[0].parentNode.offsetWidth;
         var self = $(this);
 
         self.height(selfP - 4);
@@ -466,6 +466,14 @@
       });
 
     });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+    $(".navbar-toggler").click(function(){
+        console.log("ddads");
+    }); 
+});
   </script>
 </body>
 
