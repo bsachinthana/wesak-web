@@ -13,6 +13,10 @@
 			crossorigin="anonymous"
 		/>
 
+    <link rel="shortcut icon" href="./img/title_icon.png" />
+    <link rel="stylesheet" href="./pages/preloader/css/normalize.css">
+	<link rel="stylesheet" href="./pages/preloader/css/main.css">
+	<script src="./pages/preloader/js/vendor/modernizr-2.6.2.min.js"></script>
 		<style>
 			/* build your own custom Bootstrap theme:
    https://themestr.app
@@ -437,10 +441,22 @@ html,body {
 }
 
 		</style>
-		<title>Hello, world!</title>
+		<title>Simcentric Vesak Kalapya 2021</title>
 	</head>
 
 	<body>
+    <div id="loader-wrapper">
+			<div id="loader"></div>
+
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right">
+              <h1 style="text-align: center;padding-top: 10%;color: #151313;">
+                සිම්සෙන්ට්‍රික් වෙසක් කලාපය 2021
+              </h1>
+            </div>
+
+		</div>
+
     <video autoplay muted loop id="myVideo">
       <source src="./img/bg_video.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
@@ -580,19 +596,32 @@ html,body {
 
 					<div class = "gallery">
 						<div class="clipped-border">
+              <a href="./pages/vesakThorana.html">
 						  <img class="h1" src="./img/V1 .png" id="clipped">
+            </a>
 						</div>
 						<div class="clipped-border">
+              <a href="./pages/vesakKudu.html">
+             
 						  <img class="h1" src="./img/V2.png" id="clipped">
+              </a>
 						</div>
 						<div class="clipped-border">
+              <a href="./pages/vesakPaniwida.html">
+              
 						  <img class="h1" src="./img/V3.png" id="clipped">
+              </a>
 						</div>
 						  <div class="clipped-border">
+                <a href="./pages/vesakBathiGee.html">
 						  <img class="h1" src="./img/V4.png" id="clipped">
+              </a>
 						</div>
 						  <div class="clipped-border">
+                
+                  <a href="./pages/vesakNirmana.html">
 						  <img class="h1" src="./img/V5.png" id="clipped">
+              </a>
 						</div>
 						
 					  </div>
@@ -684,6 +713,10 @@ $('span#rotatedRectangle').each(function () {
 });
     });
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="./pages/preloader/js/main.js"></script>
 
 	</body>
 </html>
