@@ -69,9 +69,9 @@
         background-size: cover;
       }
 
-      #rotatedRectangle {
-        height: 278px !important;
-      }
+      /* #rotatedRectangle {
+        height: 319px !important;
+      } */
 
 
     }
@@ -195,7 +195,7 @@
 
     article {
       padding: 2%;
-      border: 1px solid #999;
+      border: 4px solid cornflowerblue;
       border-radius: 5px;
       background: #fff;
     }
@@ -206,7 +206,7 @@
     }
 
     main {
-      columns: 250px;
+      columns: 21pc;
       column-gap: 20px;
     }
 
@@ -248,8 +248,14 @@
 	height: 48px;
 }
 
+article img{
+  transition: transform .2s;
+}
+article img:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 
-
+  @media only screen and (max-width:421px)  { .popup{width: 141vw; height: 111vh;} .popup figure figcaption{font-size: 13px;}}
 
 
 
@@ -277,7 +283,7 @@
         <a class="navbar-brand" href="../index.html" style="width: 40px;"><img src="../img/home_icon.png" height="40px"
             width="40px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" id="navbar1">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -343,7 +349,12 @@
         <div class="grid backgrd1">
           <div class="row">
             <h1 class="sectionHeader" style=" box-shadow: 0 0 10px 3px;">සිම්සෙන්ට්‍රික් පවුලේ නිර්මාණ</h1>
+           
+            </div>
+            
           <main>
+          
+
             <article>
               <img src="./../img/Nirmana/Nirmana_1.jpg">
               <h3>දනුෂ්කා කරුණාරත්න</h3>
@@ -353,7 +364,7 @@
         
           <article>
             <img src="./../img/Nirmana/Nirmana_2.png">
-            <h3>මදරා ප්‍රේමවර්ධන</h3>
+            <h3>මදාරා ප්‍රේමවර්ධන</h3>
             <p>අගනා ඩිජිටල් වෙසක් කුඩූ සිතුවමක්</p>
           </article>
           <article>
@@ -362,9 +373,11 @@
             <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
           </article>
           <article>
+      
             <img src="./../img/Nirmana/Nirmana_4.jpg">
             <h3>චන්දිමා සෙනරත්</h3>
             <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+
           </article>
           <article>
             <img src="./../img/Nirmana/Nirmana_5.jpg">
@@ -383,10 +396,41 @@
             <h3>යසිරු අල්ගම</h3>
             <p>අගනා ඩිජිටල් වෙසක් සිතුවමක්</p>
           </article>
+
+          <article>
+            <img src="./../img/Nirmana/Nirmana_6.jpg">
+            <h3>ගයන්ති ඉමාෂා</h3>
+            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+          </article>
+          <article>
+            <img src="./../img/Nirmana/Nirmana_7.jpg">
+            <h3>චන්දික පීරිස්</h3>
+            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+          </article>
+
+     
+
+          <article>
+            <img src="./../img/Nirmana/Nirmana_8.jpg">
+            <h3>කසුන්ත ජයසේකර</h3>
+            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+          </article>
+
+          <article>
+            <img src="./../img/Nirmana/Niramana_9.jpg">
+            <h3>දුශාන්ත එරංග</h3>
+            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+          </article>
+
+          <article>
+            <img src="./../img/Nirmana/Nirmana_10.png">
+            <h3>දනුෂ්කා කරුණාරත්න</h3>
+            <p>අගනා ඩිජිටල් සිතුවමක්</p>
+          </article>
             </main>
 
-          </div>
-
+       
+          
           <div class="row">
             <h1 class="sectionHeader" style=" box-shadow: 0 0 10px 3px; margin-top: 1%;">ළමා චිත්‍ර</h1>
           <main>
@@ -397,7 +441,7 @@
             </article>
             <article>
               <img src="./../img/Nirmana/LamaChithra/Sanduli Basnayake 4 Years.jpg">
-              <h3>සන්ඳුලි බස්නායක</h3>
+              <h3>සඳුලි බස්නායක</h3>
               <p>අවුරුදු 4</p>
             </article>
             <article>
@@ -410,6 +454,12 @@
               <h3>තේනුජ රනතුංග</h3>
               <p>අවුරුදු 5</p>
             </article>
+            <article>
+              <img src="./../img/Nirmana/LamaChithra/Bawanya Rajapakshe.png">
+              <h3>බවන්‍යා රාජපක්ෂ</h3>
+              <p>අවුරුදු 7</p>
+            </article>
+           
           </main>
         </div>
         </div>
@@ -488,6 +538,11 @@
       </div>
     </div>
   
+
+
+
+
+    
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -517,6 +572,27 @@
 
     });
   </script>
+  <script>
+   $( "#navbar1" ).click(function() {
+    
+    setTimeout(function(){
+        var divHeight = $('.box').width();
+      $('span#rotatedRectangle').each(function () {
+
+        var selfP = $(this)[0].parentNode.offsetWidth;
+        var self = $(this);
+
+        self.height(selfP - 4);
+
+      });
+      
+    }, 200);
+      
+    });
+
+
+  </script>
+ 
 </body>
 <footer>
   <p><img src="../img/bg_vesakNirmanaborder.png"></p>

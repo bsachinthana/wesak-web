@@ -145,11 +145,6 @@
         background-size: cover;
       }
 
-      #rotatedRectangle
-      {
-        height: 278px !important;
-      }
-
 
     }
     .borderSpam
@@ -286,7 +281,7 @@
       <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
         <a class="navbar-brand" href="../index.html"><img src="../img/home_icon.png" height="40px" width="40px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" id="navbar1">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -568,6 +563,27 @@
 
 
   </script>
+
+<script>
+  $( "#navbar1" ).click(function() {
+   
+   setTimeout(function(){
+       var divHeight = $('.box').width();
+     $('span#rotatedRectangle').each(function () {
+
+       var selfP = $(this)[0].parentNode.offsetWidth;
+       var self = $(this);
+
+       self.height(selfP - 4);
+
+     });
+     
+   }, 200);
+     
+   });
+
+
+ </script>
 </body>
  
   <footer>
