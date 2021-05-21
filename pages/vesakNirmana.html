@@ -21,8 +21,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="../img/title_icon.png" />
   <link rel="stylesheet" href="../pages/preloader/css/normalize.css">
-	<link rel="stylesheet" href="../pages/preloader/css/main.css">
-	<script src="../pages/preloader/js/vendor/modernizr-2.6.2.min.js"></script>
+  <link rel="stylesheet" href="../pages/preloader/css/main.css">
+  <script src="../pages/preloader/js/vendor/modernizr-2.6.2.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -31,7 +31,7 @@
     body {
       font-family: sans-serif;
       background-image: url("../img/bg_vesakNirmana.png");
-     /* background-size: 100% 100%;*/
+      /* background-size: 100% 100%;*/
     }
 
     .content {
@@ -90,7 +90,7 @@
       box-shadow: 0 20px 50px rgb(193 189 49);
       border: 2px solid #ffc107;
       color: white;
-      
+
     }
 
     .box:before {
@@ -215,52 +215,79 @@
       margin-bottom: 1rem;
     }
 
-    .sectionHeader{
-    color:rgb(113, 102, 180) !important;
-    font: bold;
-    
+    .sectionHeader {
+      color: rgb(113, 102, 180) !important;
+      font: bold;
+
     }
 
-    .img-size{
-/* 	padding: 0;
+    .img-size {
+      /* 	padding: 0;
 	margin: 0; */
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-	overflow: hidden;
-}
-.modal-content {
-   width: 100%;
-  border:none;
-}
-.modal-body {
-   padding: 0;
-}
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      overflow: hidden;
+    }
 
-.carousel-control-prev-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-	width: 30px;
-	height: 48px;
-}
-.carousel-control-next-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-	width: 30px;
-	height: 48px;
-}
+    .modal-content {
+      width: 100%;
+      border: none;
+    }
 
-article img{
-  transition: transform .2s;
-}
-article img:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+    .modal-body {
+      padding: 0;
+    }
 
-  @media only screen and (max-width:421px)  { .popup{width: 141vw; height: 111vh;} .popup figure figcaption{font-size: 13px;}}
-  @media only screen and (max-width:1101px) { .logo{top:0 !important}}
-@media only screen and (min-width:1101px) and (max-width: 1602px) { .logo{top:-18px !important}}
-@media only screen and (min-width: 1602px) { .logo{top:0 !important}}
+    .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+      width: 30px;
+      height: 48px;
+    }
 
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+      width: 30px;
+      height: 48px;
+    }
 
+    article img {
+      transition: transform .2s;
+    }
+
+    article img:hover {
+      transform: scale(1.2);
+      /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    @media only screen and (max-width:421px) {
+      .popup {
+        width: 141vw;
+        height: 111vh;
+      }
+
+      .popup figure figcaption {
+        font-size: 13px;
+      }
+    }
+
+    @media only screen and (max-width:1101px) {
+      .logo {
+        top: 0 !important
+      }
+    }
+
+    @media only screen and (min-width:1101px) and (max-width: 1602px) {
+      .logo {
+        top: -18px !important
+      }
+    }
+
+    @media only screen and (min-width: 1602px) {
+      .logo {
+        top: 0 !important
+      }
+    }
   </style>
   <title>Simcentric Vesak Kalapya 2021</title>
 </head>
@@ -271,19 +298,19 @@ article img:hover {
     <div id="loader"></div>
 
     <div class="loader-section section-left"></div>
-          <div class="loader-section section-right">
-            <h1 style="text-align: center;padding-top: 10%;color: #151313;">
-              සිම්සෙන්ට්‍රික් වෙසක් කලාපය 2021
-            </h1>
-          </div>
+    <div class="loader-section section-right">
+      <h1 style="text-align: center;padding-top: 10%;color: #151313;">
+        සිම්සෙන්ට්‍රික් වෙසක් කලාපය 2021
+      </h1>
+    </div>
 
   </div>
   <div class="container-fluid min-vh-100 padding d-flex flex-column">
     <div class="row ">
 
       <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
-        <div class="logo"style="float: left;top: 0;left: 0;position: absolute;" >
-          <img id="imgID" src="../img/vesak_logo.png">
+        <div class="logo" style="float: left;top: 0;left: 0;position: absolute;">
+          <img id="imgID" src="">
         </div>
         <a class="navbar-brand" href="../index.html" style="width: 40px;"><img src="../img/home_icon.png" height="40px"
             width="40px"></a>
@@ -354,143 +381,144 @@ article img:hover {
         <div class="grid backgrd1">
           <div class="row">
             <h1 class="sectionHeader" style=" box-shadow: 0 0 10px 3px;">සිම්සෙන්ට්‍රික් පවුලේ නිර්මාණ</h1>
-           
-            </div>
-            
+
+          </div>
+
           <main>
-          
+
 
             <article>
               <img src="./../img/Nirmana/Nirmana_1.jpg">
               <h3>දනුෂ්කා කරුණාරත්න</h3>
               <p>අගනා ඩිජිටල් සිතුවමක්</p>
             </article>
-          
-        
-          <article>
-            <img src="./../img/Nirmana/Nirmana_2.png">
-            <h3>මදාරා ප්‍රේමවර්ධන</h3>
-            <p>අගනා ඩිජිටල් වෙසක් කුඩූ සිතුවමක්</p>
-          </article>
-          <article>
-            <img src="./../img/Nirmana/Nirmana_3.jpg">
-            <h3>කුශාන්ති විහංගනා</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
-          </article>
-          <article>
-      
-            <img src="./../img/Nirmana/Nirmana_4.jpg">
-            <h3>චන්දිමා සෙනරත්</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
 
-          </article>
-          <article>
-            <img src="./../img/Nirmana/Nirmana_5.jpg">
-            <h3>කුශාන්ති විහංගනා</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් කවියක්</p>
-          </article>
-         
-          <article>
-           
-            <img src="./../img/Nirmana/Ketikatha/Chandima/thumbnail.png">
-            <h3>චන්දිමා සෙනරත්</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් කෙටි කතාවක්. සම්පුර්ණ කතාව <a href="#" data-toggle="modal" data-target="#largeModal">මෙතණින්</a></p>
-          </article>
-          <article>
-            <img src="./../img/Nirmana/Nirmana_6.png">
-            <h3>යසිරු අල්ගම</h3>
-            <p>අගනා ඩිජිටල් වෙසක් සිතුවමක්</p>
-          </article>
 
-          <article>
-            <img src="./../img/Nirmana/Nirmana_6.jpg">
-            <h3>ගයන්ති ඉමාෂා</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
-          </article>
-          <article>
-            <img src="./../img/Nirmana/Nirmana_7.jpg">
-            <h3>චන්දික පීරිස්</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
-          </article>
+            <article>
+              <img src="./../img/Nirmana/Nirmana_2.png">
+              <h3>මදාරා ප්‍රේමවර්ධන</h3>
+              <p>අගනා ඩිජිටල් වෙසක් කුඩූ සිතුවමක්</p>
+            </article>
+            <article>
+              <img src="./../img/Nirmana/Nirmana_3.jpg">
+              <h3>කුශාන්ති විහංගනා</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+            </article>
+            <article>
 
-     
+              <img src="./../img/Nirmana/Nirmana_4.jpg">
+              <h3>චන්දිමා සෙනරත්</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
 
-          <article>
-            <img src="./../img/Nirmana/Nirmana_8.jpg">
-            <h3>කසුන්ත ජයසේකර</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
-          </article>
+            </article>
+            <article>
+              <img src="./../img/Nirmana/Nirmana_5.jpg">
+              <h3>කුශාන්ති විහංගනා</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් කවියක්</p>
+            </article>
 
-          <article>
-            <img src="./../img/Nirmana/Niramana_9.jpg">
-            <h3>දුශාන්ත එරංග</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
-          </article>
+            <article>
 
-          <article>
-            <img src="./../img/Nirmana/Nirmana_10.png">
-            <h3>දනුෂ්කා කරුණාරත්න</h3>
-            <p>අගනා ඩිජිටල් සිතුවමක්</p>
-          </article>
+              <img src="./../img/Nirmana/Ketikatha/Chandima/thumbnail.png">
+              <h3>චන්දිමා සෙනරත්</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් කෙටි කතාවක්. සම්පුර්ණ කතාව <a href="#" data-toggle="modal"
+                  data-target="#largeModal">මෙතණින්</a></p>
+            </article>
+            <article>
+              <img src="./../img/Nirmana/Nirmana_6.png">
+              <h3>යසිරු අල්ගම</h3>
+              <p>අගනා ඩිජිටල් වෙසක් සිතුවමක්</p>
+            </article>
 
-          <article>
-            <img src="./../img/Nirmana/Nirmana_11.png">
-            <h3>අනුරුද්ධ ලංකාභරණ</h3>
-            <p>මෙත් සිත් වඩනා වෙසක් කවියක්</p>
-          </article>
+            <article>
+              <img src="./../img/Nirmana/Nirmana_6.jpg">
+              <h3>ගයන්ති ඉමාෂා</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+            </article>
+            <article>
+              <img src="./../img/Nirmana/Nirmana_7.jpg">
+              <h3>චන්දික පීරිස්</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+            </article>
 
-          <article>
-            <img src="./../img/Nirmana/Niramana_12.jpg">
-            <h3>සුධාරක සෙනෙවිරත්න</h3>
-            <p>අගනා ඩිජිටල් සිතුවමක්</p>
-          </article>
-            </main>
 
-       
-          
+
+            <article>
+              <img src="./../img/Nirmana/Nirmana_8.jpg">
+              <h3>කසුන්ත ජයසේකර</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+            </article>
+
+            <article>
+              <img src="./../img/Nirmana/Niramana_9.jpg">
+              <h3>දුශාන්ත එරංග</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් නිසඳසක්</p>
+            </article>
+
+            <article>
+              <img src="./../img/Nirmana/Nirmana_10.png">
+              <h3>දනුෂ්කා කරුණාරත්න</h3>
+              <p>අගනා ඩිජිටල් සිතුවමක්</p>
+            </article>
+
+            <article>
+              <img src="./../img/Nirmana/Nirmana_11.png">
+              <h3>අනුරුද්ධ ලංකාභරණ</h3>
+              <p>මෙත් සිත් වඩනා වෙසක් කවියක්</p>
+            </article>
+
+            <article>
+              <img src="./../img/Nirmana/Niramana_12.jpg">
+              <h3>සුධාරක සෙනෙවිරත්න</h3>
+              <p>අගනා ඩිජිටල් සිතුවමක්</p>
+            </article>
+          </main>
+
+
+
           <div class="row">
             <h1 class="sectionHeader" style=" box-shadow: 0 0 10px 3px; margin-top: 1%;">ළමා චිත්‍ර</h1>
-          <main>
-            <article>
-              <img src="./../img/Nirmana/LamaChithra/Disas Munasinghe 10 Years.png">
-              <h3>දිසස් මුනසිංහ</h3>
-              <p>අවුරුදු 10</p>
-            </article>
-            <article>
-              <img src="./../img/Nirmana/LamaChithra/Sanduli Basnayake 4 Years.jpg">
-              <h3>සඳුලි බස්නායක</h3>
-              <p>අවුරුදු 4</p>
-            </article>
-            <article>
-              <img src="./../img/Nirmana/LamaChithra/Thehan Munasinghe  8 Years.png">
-              <h3>තෙහාන් මුනසිංහ</h3>
-              <p>අවුරුදු 8</p>
-            </article>
-            <article>
-              <img src="./../img/Nirmana/LamaChithra/Thenuja Ranathunga 5 Years.png">
-              <h3>තේනුජ රනතුංග</h3>
-              <p>අවුරුදු 5</p>
-            </article>
-            <article>
-              <img src="./../img/Nirmana/LamaChithra/Bawanya Rajapakshe.png">
-              <h3>බවන්‍යා රාජපක්ෂ</h3>
-              <p>අවුරුදු 7</p>
-            </article>
+            <main>
+              <article>
+                <img src="./../img/Nirmana/LamaChithra/Disas Munasinghe 10 Years.png">
+                <h3>දිසස් මුනසිංහ</h3>
+                <p>අවුරුදු 10</p>
+              </article>
+              <article>
+                <img src="./../img/Nirmana/LamaChithra/Sanduli Basnayake 4 Years.jpg">
+                <h3>සඳුලි බස්නායක</h3>
+                <p>අවුරුදු 4</p>
+              </article>
+              <article>
+                <img src="./../img/Nirmana/LamaChithra/Thehan Munasinghe  8 Years.png">
+                <h3>තෙහාන් මුනසිංහ</h3>
+                <p>අවුරුදු 8</p>
+              </article>
+              <article>
+                <img src="./../img/Nirmana/LamaChithra/Thenuja Ranathunga 5 Years.png">
+                <h3>තේනුජ රනතුංග</h3>
+                <p>අවුරුදු 5</p>
+              </article>
+              <article>
+                <img src="./../img/Nirmana/LamaChithra/Bawanya Rajapakshe.png">
+                <h3>බවන්‍යා රාජපක්ෂ</h3>
+                <p>අවුරුදු 7</p>
+              </article>
 
-            <article>
-              <img src="./../img/Nirmana/LamaChithra/Ayen Welgama.png">
-              <h3>අයෙන් වෙල්ගම</h3>
-              <p>අවුරුදු 5</p>
-            </article>
+              <article>
+                <img src="./../img/Nirmana/LamaChithra/Ayen Welgama.png">
+                <h3>අයෙන් වෙල්ගම</h3>
+                <p>අවුරුදු 5</p>
+              </article>
 
-            <article>
-              <img src="./../img/Nirmana/LamaChithra/Sithuki Amelia.png">
-              <h3>සිතුකි ඇමෙලියා</h3>
-              <p>අවුරුදු 5</p>
-            </article>
-           
-          </main>
-        </div>
+              <article>
+                <img src="./../img/Nirmana/LamaChithra/Sithuki Amelia.png">
+                <h3>සිතුකි ඇමෙලියා</h3>
+                <p>අවුරුදු 5</p>
+              </article>
+
+            </main>
+          </div>
         </div>
 
       </div>
@@ -502,26 +530,12 @@ article img:hover {
     <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-body">
-           <!-- carousel -->
-          <div
-               id='carouselExampleIndicators'
-               class='carousel slide'
-               data-ride='carousel'
-               >
+          <!-- carousel -->
+          <div id='carouselExampleIndicators' class='carousel slide' data-ride='carousel'>
             <ol class='carousel-indicators'>
-              <li
-                  data-target='#carouselExampleIndicators'
-                  data-slide-to='0'
-                  class='active'
-                  ></li>
-              <li
-                  data-target='#carouselExampleIndicators'
-                  data-slide-to='1'
-                  ></li>
-              <li
-                  data-target='#carouselExampleIndicators'
-                  data-slide-to='2'
-                  ></li>
+              <li data-target='#carouselExampleIndicators' data-slide-to='0' class='active'></li>
+              <li data-target='#carouselExampleIndicators' data-slide-to='1'></li>
+              <li data-target='#carouselExampleIndicators' data-slide-to='2'></li>
             </ol>
             <div class='carousel-inner'>
               <div class='carousel-item active'>
@@ -534,29 +548,14 @@ article img:hover {
                 <img class='img-size' src='../img/Nirmana/Ketikatha/Chandima/ketikatha_3.png' alt='Second slide' />
               </div>
             </div>
-            <a
-               class='carousel-control-prev'
-               href='#carouselExampleIndicators'
-               role='button'
-               data-slide='prev'
-               style="width: auto !important"
-               >
-              <span class='carousel-control-prev-icon'
-                    aria-hidden='true'
-                    ></span>
+            <a class='carousel-control-prev' href='#carouselExampleIndicators' role='button' data-slide='prev'
+              style="width: auto !important">
+              <span class='carousel-control-prev-icon' aria-hidden='true'></span>
               <span class='sr-only'>Previous</span>
             </a>
-            <a
-               class='carousel-control-next'
-               href='#carouselExampleIndicators'
-               role='button'
-               data-slide='next'
-               style="width: auto !important"
-               >
-              <span
-                    class='carousel-control-next-icon'
-                    aria-hidden='true'
-                    ></span>
+            <a class='carousel-control-next' href='#carouselExampleIndicators' role='button' data-slide='next'
+              style="width: auto !important">
+              <span class='carousel-control-next-icon' aria-hidden='true'></span>
               <span class='sr-only'>Next</span>
             </a>
           </div>
@@ -566,104 +565,130 @@ article img:hover {
         </div>
       </div>
     </div>
-  
 
 
 
 
-    
-  <!-- Optional JavaScript; choose one of the two! -->
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
 
 
-  
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-	<script src="../pages/preloader/js/main.js"></script>
- 
-  <script>
-    $(document).ready(function () {
+    <!-- Optional JavaScript; choose one of the two! -->
 
-      var divHeight = $('.box').width();
-      $('span#rotatedRectangle').each(function () {
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
 
-        var selfP = $(this)[0].parentNode.offsetWidth;
-        var self = $(this);
 
-        self.height(selfP - 4);
 
-      });
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="../pages/preloader/js/main.js"></script>
 
-      if($(window).width() > 1101 && $(window).width() <= 1601) {
-    $("#imgID").each(function() {
-      $(this).attr("src", "../img/vesak_logo_sm.png");
-     
-    });
-  }
-  else if($(window).width() > 1601){
-    $("#imgID").each(function() {
-      $(this).attr("src","../img/vesak_logo.png");
+    <script>
+      $(document).ready(function () {
 
-});
-  }
-  else{
-    $("#imgID").each(function() {
-      $(this).attr("src",  "");
-   
-});
-  }
-
-    });
-  </script>
-  <script>
-   $( "#navbar1" ).click(function() {
-    
-    setTimeout(function(){
         var divHeight = $('.box').width();
-      $('span#rotatedRectangle').each(function () {
+        $('span#rotatedRectangle').each(function () {
 
-        var selfP = $(this)[0].parentNode.offsetWidth;
-        var self = $(this);
+          var selfP = $(this)[0].parentNode.offsetWidth;
+          var self = $(this);
 
-        self.height(selfP - 4);
+          self.height(selfP - 4);
+
+        });
+
+        if ($(window).width() > 1101 && $(window).width() <= 1601) {
+          $("#imgID").each(function () {
+            $(this).attr("src", "../img/vesak_logo_sm.png");
+
+          });
+        }
+        else if ($(window).width() > 1601) {
+          $("#imgID").each(function () {
+            $(this).attr("src", "../img/vesak_logo.png");
+
+          });
+        }
+        else {
+          $("#imgID").each(function () {
+            $(this).attr("src", "");
+
+          });
+        }
 
       });
-      
-    }, 200);
-      
-    });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+
+        if ($(window).width() > 1101 && $(window).width() <= 1601) {
+          $("#imgID").each(function () {
+            $(this).attr("src", "../img/vesak_logo_sm.png");
+
+          });
+        }
+        else if ($(window).width() > 1601) {
+          $("#imgID").each(function () {
+            $(this).attr("src", "../img/vesak_logo.png");
+
+          });
+        }
+        else {
+          $("#imgID").each(function () {
+            $(this).attr("src", "");
+
+          });
+        }
+
+      });
+    </script>
+    <script>
+      $("#navbar1").click(function () {
+
+        setTimeout(function () {
+          var divHeight = $('.box').width();
+          $('span#rotatedRectangle').each(function () {
+
+            var selfP = $(this)[0].parentNode.offsetWidth;
+            var self = $(this);
+
+            self.height(selfP - 4);
+
+          });
+
+        }, 200);
+
+      });
 
 
-  </script>
- <script>
-  $( window ).resize(function() {
-    if($(window).width() > 1101 && $(window).width() <= 1601) {
-    $("#imgID").each(function() {
-      $(this).attr("src", "../img/vesak_logo_sm.png");
-     
-    });
-  }
-  else if($(window).width() > 1601){
-    $("#imgID").each(function() {
-      $(this).attr("src","../img/vesak_logo.png");
+    </script>
+    <script>
+      $(window).resize(function () {
+        if ($(window).width() > 1101 && $(window).width() <= 1601) {
+          $("#imgID").each(function () {
+            $(this).attr("src", "../img/vesak_logo_sm.png");
 
-});
-  }
-  else{
-    $("#imgID").each(function() {
-      $(this).attr("src",  "");
-   
-});
-  }
-});
-</script>
+          });
+        }
+        else if ($(window).width() > 1601) {
+          $("#imgID").each(function () {
+            $(this).attr("src", "../img/vesak_logo.png");
+
+          });
+        }
+        else {
+          $("#imgID").each(function () {
+            $(this).attr("src", "");
+
+          });
+        }
+      });
+    </script>
 </body>
 <!-- <footer>
   <p><img src="../img/bg_vesakNirmanaborder.png"></p>
 </footer> -->
+
 </html>
