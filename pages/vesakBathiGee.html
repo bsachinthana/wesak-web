@@ -192,7 +192,9 @@
       }
     }
 
-
+    @media only screen and (max-width:1101px) { .logo{top:0 !important}}
+@media only screen and (min-width:1101px) and (max-width: 1602px) { .logo{top:-18px !important}}
+@media only screen and (min-width: 1602px) { .logo{top:0 !important}}
   
   </style>
   <title>Simcentric Vesak Kalapya 2021</title>
@@ -215,6 +217,10 @@
     <div class="row ">
 
       <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+        
+ <div class="logo"style="float: left;top: 0;left: 0;position: absolute;" >
+  <img id="imgID" src="../img/vesak_logo.png">
+</div>
         <a class="navbar-brand" href="../index.html" style="width: 40px;"><img src="../img/home_icon.png" height="40px"
             width="40px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -318,6 +324,26 @@
 
       });
 
+
+      if($(window).width() > 1101 && $(window).width() <= 1601) {
+    $("#imgID").each(function() {
+      $(this).attr("src", "../img/vesak_logo_sm.png");
+     
+    });
+  }
+  else if($(window).width() > 1601){
+    $("#imgID").each(function() {
+      $(this).attr("src","../img/vesak_logo.png");
+
+});
+  }
+  else{
+    $("#imgID").each(function() {
+      $(this).attr("src",  "");
+   
+});
+  }
+
     });
   </script>
 
@@ -366,8 +392,32 @@ var gallery = document.getElementById('gallery');
 
 
  </script>
+
+ 
+<script>
+  $( window ).resize(function() {
+    if($(window).width() > 1101 && $(window).width() <= 1601) {
+    $("#imgID").each(function() {
+      $(this).attr("src", "../img/vesak_logo_sm.png");
+     
+    });
+  }
+  else if($(window).width() > 1601){
+    $("#imgID").each(function() {
+      $(this).attr("src","../img/vesak_logo.png");
+
+});
+  }
+  else{
+    $("#imgID").each(function() {
+      $(this).attr("src",  "");
+   
+});
+  }
+});
+</script>
 </body>
-   <footer>
+   <!-- <footer>
   <p><img src="../img/borderbathi.png"></p>
-</footer>
+</footer> -->
 </html>

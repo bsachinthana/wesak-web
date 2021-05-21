@@ -256,7 +256,9 @@ article img:hover {
   }
 
   @media only screen and (max-width:421px)  { .popup{width: 141vw; height: 111vh;} .popup figure figcaption{font-size: 13px;}}
-
+  @media only screen and (max-width:1101px) { .logo{top:0 !important}}
+@media only screen and (min-width:1101px) and (max-width: 1602px) { .logo{top:-18px !important}}
+@media only screen and (min-width: 1602px) { .logo{top:0 !important}}
 
 
   </style>
@@ -280,6 +282,9 @@ article img:hover {
     <div class="row ">
 
       <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+        <div class="logo"style="float: left;top: 0;left: 0;position: absolute;" >
+          <img id="imgID" src="../img/vesak_logo.png">
+        </div>
         <a class="navbar-brand" href="../index.html" style="width: 40px;"><img src="../img/home_icon.png" height="40px"
             width="40px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -427,6 +432,18 @@ article img:hover {
             <h3>දනුෂ්කා කරුණාරත්න</h3>
             <p>අගනා ඩිජිටල් සිතුවමක්</p>
           </article>
+
+          <article>
+            <img src="./../img/Nirmana/Nirmana_11.png">
+            <h3>අනුරුද්ධ ලංකාභරණ</h3>
+            <p>මෙත් සිත් වඩනා වෙසක් කවියක්</p>
+          </article>
+
+          <article>
+            <img src="./../img/Nirmana/Niramana_12.jpg">
+            <h3>සුධාරක සෙනෙවිරත්න</h3>
+            <p>අගනා ඩිජිටල් සිතුවමක්</p>
+          </article>
             </main>
 
        
@@ -458,6 +475,18 @@ article img:hover {
               <img src="./../img/Nirmana/LamaChithra/Bawanya Rajapakshe.png">
               <h3>බවන්‍යා රාජපක්ෂ</h3>
               <p>අවුරුදු 7</p>
+            </article>
+
+            <article>
+              <img src="./../img/Nirmana/LamaChithra/Ayen Welgama.png">
+              <h3>අයෙන් වෙල්ගම</h3>
+              <p>අවුරුදු 5</p>
+            </article>
+
+            <article>
+              <img src="./../img/Nirmana/LamaChithra/Sithuki Amelia.png">
+              <h3>සිතුකි ඇමෙලියා</h3>
+              <p>අවුරුදු 5</p>
             </article>
            
           </main>
@@ -570,6 +599,25 @@ article img:hover {
 
       });
 
+      if($(window).width() > 1101 && $(window).width() <= 1601) {
+    $("#imgID").each(function() {
+      $(this).attr("src", "../img/vesak_logo_sm.png");
+     
+    });
+  }
+  else if($(window).width() > 1601){
+    $("#imgID").each(function() {
+      $(this).attr("src","../img/vesak_logo.png");
+
+});
+  }
+  else{
+    $("#imgID").each(function() {
+      $(this).attr("src",  "");
+   
+});
+  }
+
     });
   </script>
   <script>
@@ -592,9 +640,30 @@ article img:hover {
 
 
   </script>
- 
+ <script>
+  $( window ).resize(function() {
+    if($(window).width() > 1101 && $(window).width() <= 1601) {
+    $("#imgID").each(function() {
+      $(this).attr("src", "../img/vesak_logo_sm.png");
+     
+    });
+  }
+  else if($(window).width() > 1601){
+    $("#imgID").each(function() {
+      $(this).attr("src","../img/vesak_logo.png");
+
+});
+  }
+  else{
+    $("#imgID").each(function() {
+      $(this).attr("src",  "");
+   
+});
+  }
+});
+</script>
 </body>
-<footer>
+<!-- <footer>
   <p><img src="../img/bg_vesakNirmanaborder.png"></p>
-</footer>
+</footer> -->
 </html>

@@ -522,6 +522,10 @@
         {
             margin-top: 0px;
         }
+
+        @media only screen and (max-width:1101px) { .logo{top:0 !important}}
+@media only screen and (min-width:1101px) and (max-width: 1602px) { .logo{top:-18px !important}}
+@media only screen and (min-width: 1602px) { .logo{top:0 !important}}
     </style>
     <title>Simcentric Vesak Kalapya 2021</title>
 </head>
@@ -543,6 +547,9 @@
         <div class="row ">
 
             <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+                <div class="logo"style="float: left;top: 0;left: 0;position: absolute;" >
+                    <img id="imgID" src="../img/vesak_logo.png">
+                  </div>
                 <a class="navbar-brand" href="../index.html" style="width: 40px;"><img src="../img/home_icon.png"
                         height="40px" width="40px"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -615,27 +622,27 @@
                         <li class="hex">
                             <div class="hexIn">
                                 <a class="hexLink" id="1" href="#">
-                                    <img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" alt="" />
-                                    <h1>This is a title</h1>
-                                    <p>Some sample text about the article this hexagon leads to</p>
+                                    <img src="../img/paniwida/employee/1.png" alt="" />
+                                    <h1>Sudesh Ranjan</h1>
+                                    <p>Cheif Technical Officer</p>
                                 </a>
                             </div>
                         </li>
                         <li class="hex">
                             <div class="hexIn">
-                                <a class="hexLink" href="#">
-                                    <img src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" alt="" />
-                                    <h1>This is a title</h1>
-                                    <p>Some sample text about the article this hexagon leads to</p>
+                                <a class="hexLink" id="2" href="#">
+                                    <img src="../img/paniwida/employee/2.png" alt="" />
+                                    <h1>Gayanthi Imasha</h1>
+                                    <p>Quality Assurance Engineer</p>
                                 </a>
                             </div>
                         </li>
                         <li class="hex">
                             <div class="hexIn">
-                                <a class="hexLink" href="#">
-                                    <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-                                    <h1>This is a title</h1>
-                                    <p>Some sample text about the article this hexagon leads to</p>
+                                <a class="hexLink" id="3" href="#">
+                                    <img src="../img/paniwida/employee/3.png" alt="" />
+                                    <h1>Kasuntha Jayasekara</h1>
+                                    <p>Associate Tech Lead</p>
                                 </a>
                             </div>
                         </li>
@@ -909,6 +916,25 @@
 
                 });
 
+                if($(window).width() > 1101 && $(window).width() <= 1601) {
+    $("#imgID").each(function() {
+      $(this).attr("src", "../img/vesak_logo_sm.png");
+     
+    });
+  }
+  else if($(window).width() > 1601){
+    $("#imgID").each(function() {
+      $(this).attr("src","../img/vesak_logo.png");
+
+});
+  }
+  else{
+    $("#imgID").each(function() {
+      $(this).attr("src",  "");
+   
+});
+  }
+
             });
         </script>
 
@@ -981,8 +1007,32 @@
          
          
            </script>
+<script>
+    $( window ).resize(function() {
+      if($(window).width() > 1101 && $(window).width() <= 1601) {
+      $("#imgID").each(function() {
+        $(this).attr("src", "../img/vesak_logo_sm.png");
+       
+      });
+    }
+    else if($(window).width() > 1601){
+      $("#imgID").each(function() {
+        $(this).attr("src","../img/vesak_logo.png");
+  
+  });
+    }
+    else{
+      $("#imgID").each(function() {
+        $(this).attr("src",  "");
+     
+  });
+    }
+  });
+  </script>
+
+
 </body>
-<footer>
+<!-- <footer>
   <p><img src="../img/bg_vesakPaniwida border.png"></p>
-</footer>
+</footer> -->
 </html>
