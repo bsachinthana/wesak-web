@@ -663,6 +663,25 @@
         }
 
 
+        @media only screen and (min-width: 1601px) {
+            .vesakMessage{
+        font-size: 34px !important;
+      }
+        }
+
+        @media only screen and (min-width:837px) and (max-width: 1600px) {
+            .vesakMessage{
+        font-size: 18px !important;
+      }
+        }
+
+        @media only screen and (max-width:836px) {
+          .vesakMessage{
+        font-size: 13px !important;
+      }
+        }
+
+
     </style>
     <title>Simcentric Vesak Kalapya 2021</title>
 </head>
@@ -788,45 +807,45 @@
                         </li>
                         <li class="hex">
                             <div class="hexIn">
-                                <a class="hexLink" href="#">
+                                <a class="hexLink" id="4" href="#">
                                     <img src="https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg" alt="" />
-                                    <h1>This is a title</h1>
+                                    <h1>Dushantha Eranga</h1>
                                     <p>Some sample text about the article this hexagon leads to</p>
                                 </a>
                             </div>
                         </li>
                         <li class="hex">
                             <div class="hexIn">
-                                <a class="hexLink" href="#">
+                                <a class="hexLink" id="5" href="#">
                                     <img src="https://farm7.staticflickr.com/6083/6055581292_d94c2d90e3.jpg" alt="" />
-                                    <h1>This is a title</h1>
+                                    <h1>Madara Premawardhana</h1>
                                     <p>Some sample text about the article this hexagon leads to</p>
                                 </a>
                             </div>
                         </li>
                         <li class="hex">
                             <div class="hexIn">
-                                <a class="hexLink" href="#">
+                                <a class="hexLink" id="6" href="#">
                                     <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-                                    <h1>This is a title</h1>
+                                    <h1>Hahsani Ruberu</h1>
                                     <p>Some sample text about the article this hexagon leads to</p>
                                 </a>
                             </div>
                         </li>
                         <li class="hex">
                             <div class="hexIn">
-                                <a class="hexLink" href="#">
+                                <a class="hexLink" id="7" href="#">
                                     <img src="https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg" alt="" />
-                                    <h1>This is a title</h1>
+                                    <h1>Sampath Munasinghe</h1>
                                     <p>Some sample text about the article this hexagon leads to</p>
                                 </a>
                             </div>
                         </li>
                         <li class="hex">
                             <div class="hexIn">
-                                <a class="hexLink" href="#">
+                                <a class="hexLink" id="8" href="#">
                                     <img src="https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg" alt="" />
-                                    <h1>This is a title</h1>
+                                    <h1>Kushanthi Vihangana</h1>
                                     <p>Some sample text about the article this hexagon leads to</p>
                                 </a>
                             </div>
@@ -1120,15 +1139,25 @@
                     })
                 },
                 open: function ($figure, elementId) {
-
+                    var idElement = document.getElementById(elementId);
+                    var cars = ["Saab", 
+                    "සියලු සත්වයන්ගේ සිත් සැනසී, රාග, ද්වේෂ, මෝහ නැති වි, අභය භුමියක්, ක්ෂේම භුමියක් බදු වු නිවන කරා ලගා වීමට හැකි වෙවා. ඔබ සැමට සුබ වෙසක් මංගල්ලයක්ම වෙවා..!", 
+                    "ලක්වාසී සියලුම දෙනාට සුබ වෙසක් මංගල්‍යයක් වේවා!! \n සැමට වෙසක් සිරියෙන් මෙත්සිත් පැතිරේවා !!",
+                    "බුදුන් ගේ තෙමගුල සමරන මේ පුන් පොහෝ දින.. සියලු සිත් සතන් වලින් රෝ බිය , මරණ බිය දුරුවේවා පතමින් අපි මුනිදු පුදමු බැති සිතින් !!!",
+                     "උතුම් බුදු ගුණ සත්‍ය බලයෙන් ලෙඩ දුක් බියෙන් සසල වූ ලොවම නිදුක් වී සියලු සිත් සතන් නිවී සැනසේවා...!",
+                    "සැම සිත් තුල දිලෙන පහන් සේ කරුණා සිතිවිලි බැබලෙන පින්බර වෙසක් දිනයක් වේවා...",
+                    "රෝග අණ ව්ණ මැද \n වෙසක් තෙමගුලද ළග ළග…. \n   මෙවර වෙසගේ  කෙලෙස් සිතුවිලි ඉවත දමා \n ගතත් සිතත් නිරෝධනයට සැරසේමු! \n ලොවේ රෝග බිය දුරුවෙන, පින්බර වෙසක් මංගල්‍යක් වේවා!",
+                     "මේ  පින්බර වෙසක් දිනේ \n සියළු සිත්සතන්  සදහම්  ආලෝකයෙන් \n ඒකාලෝක වේවා!",
+                    "මේ පින්බර වෙසගේ ලොව් තුරා වෙසෙන මිනිස් සිත් තුල මෙත් මල් පිබිදී, රෝ බිය දුරුවී වෛරයෙන් තොර දිවියක් ගෙවීමට සිත් සතන් පහළ වේවා !"];
                     $('.gallery').addClass('pop');
                     $popup = $('<div class="popup" />').appendTo($('body'));
                     $fig = $('<figure></figure>').appendTo($('.popup'));
                     $imag = $('<img>').appendTo($fig);
-                    $imag.attr('src', '../img/paniwida/' + elementId + '.jpg');
+                    $dddd = $('<div class ="vesakMessage" style="position: absolute;top: 40%;left: 50%;transform: translate(-50%, -50%);z-index:2;width:75%;white-space: pre-line;">'+cars[elementId]+'</div>').appendTo($fig);
+                    $imag.attr('src', '../img/paniwida/' + elementId + '.png');
                     $imag.css('width', '100%');
                     $imag.css('height', '100%');
-                    $('<figcaption style="bottom:0px">Yellowstone National Park <small>United States</small></figcaption>').appendTo($fig);
+                    $('<figcaption style="bottom:0px">'+idElement.childNodes[3].innerText+'<small>'+idElement.childNodes[5].innerText+'</small></figcaption>').appendTo($fig);
                     $bg = $('<div class="bg" />').appendTo($('.popup'));
                     $close = $('<div class="close"><svg><use xlink:href="#close"></use></svg></div>').appendTo($fig);
                     $shadow = $('<div class="shadow" />').appendTo($fig);
