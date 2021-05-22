@@ -275,73 +275,6 @@
       height: var(--height);
     }
 
-    /* .clipped-border {
-      -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-      clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-      padding: 5px;
-      background: linear-gradient(grey, lightgrey);
-      width: var(--border-width);
-      height: var(--border-height);
-      max-height: 338px;
-      max-width: 349px;
-      height: var(--height);
-      width: var(--width);
-      transition: transform 0.2s;
-      position: absolute;
-      cursor: pointer;
-    } */
-
-
-    /* 
-    .clipped-border:before {
-      content: '';
-      position: absolute;
-      opacity: 0.5;
-      width: 470px;
-      height: 70px;
-      background: white;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      transform: rotate(45deg);
-      transition: transform 0.5s;
-    }
-
-    .clipped-border:hover:before {
-      transform: translate(-100px, 400%) rotate(45deg);
-      transition: transform 0.5s;
-    } */
-
-    /* one */
-    /* .clipped-border:nth-child(1){
-  top:0;
-  left:170px;
-} */
-
-    /* four */
-    /* .clipped-border:nth-child(2){
-  top:275px;
-  left:330px;
-} */
-
-    /* second */
-    /* .clipped-border:nth-child(3){
-  top:0;
-  left:510px;
-} */
-
-    /* five */
-    /* .clipped-border:nth-child(4){
-  top:275px;
-  left:680px;
-} */
-
-    /* third */
-    /* .clipped-border:nth-child(5){
-  top:0;
-  left:847px;
-} */
-
     #clipped {
       -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
       clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
@@ -420,6 +353,43 @@
       min-width: 100vw;
       min-height: 100vh;
       margin: 0;
+    }
+
+    #wrapperDiv a:before,#wrapperDiv a:after{
+      content:'';
+      position: absolute;
+      top: -20%;
+      left:0%;
+      width:150%;
+      height:60%;
+      background-color: #fff;
+      opacity: 0.2;
+      transform: rotate(45deg);
+      transition: all ease 0.5s;
+    }
+
+    #wrapperDiv a:after{
+      transition-delay: 10ms;
+      transition-timing-function: ease-in-out;
+      background-color: #ddd;
+      opacity: 0.1;
+    }
+
+    #wrapperDiv a:hover:before{
+      top: 50%;
+      left:-70%;
+    }
+
+    #wrapperDiv a:hover:after{
+      top: 50%;
+      left:-70%;
+    }
+
+    #wrapperDiv div[class*="col-"]{
+      position: relative;
+      overflow: hidden;
+      -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     }
 
     #myVideo {
@@ -543,29 +513,29 @@
     <div class="row ">
       <div id="wrapperDiv" class="col-12 col-lg-9 offset-lg-3 col-md-10 offset-md-2 col-xl-6 offset-xl-6 wrapper" style=" margin-top: 5em;">
         <div class="row"> <!-- gallery-->
-          <div class="clipped-border col-12 col-sm-4">
+          <div class="col-12 col-sm-4">
             <a href="./pages/vesakThorana.html">
               <img src="./img/V1.png">
             </a>
           </div>
-          <div class="clipped-border col-12 col-sm-4">
+          <div class="col-12 col-sm-4">
             <a href="./pages/vesakKudu.html">
               <img src="./img/V2.png">
             </a>
           </div>
-          <div class="clipped-border col-12 col-sm-4">
+          <div class="col-12 col-sm-4">
             <a href="./pages/vesakPaniwida.html">
               <img src="./img/V3.png">
             </a>
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-sm-4 offset-sm-2 clipped-border">
+          <div class="col-12 col-sm-4 offset-sm-2">
             <a href="./pages/vesakBathiGee.html">
               <img src="./img/V4.png">
             </a>
           </div>
-          <div class="col-12 col-sm-4 clipped-border">
+          <div class="col-12 col-sm-4">
             <a href="./pages/vesakNirmana.html">
               <img src="./img/V5.png">
             </a>
