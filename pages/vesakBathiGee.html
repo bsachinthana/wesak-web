@@ -51,8 +51,8 @@
     }
 
     .grid {
-      margin-left: 10%;
-      margin-right: 11%;
+      /* margin-left: 10%; */
+      /* margin-right: 11%; */
       /* margin-top: 3%; */
     }
 
@@ -330,13 +330,13 @@
           බැතිගී මතක</h1>
 
         </div>
-
+        <div class="row" style=" margin-left: 10%;margin-right: 11%;margin-top: 2%;">
         <div class="grid backgrd1">
           <ul id='gallery'>
 
           </ul>
         </div>
-
+      </div>
       </div>
     </div>
   </div>
@@ -433,6 +433,7 @@
         img.src = dir + i + '.jpg';
         link.appendChild(img);
         li.appendChild(link);
+        link.className = "galleryImage"
         li.className = "loaded";
         gallery.appendChild(li);
 
@@ -486,6 +487,56 @@
       }
     });
   </script>
+
+<script>
+  $(window).resize(function () {
+    if ($(window).width() >= 1493) {
+
+      var width = $('#gallery').width();
+      $('.galleryImage').width((width/4)-3);
+
+    
+    }
+    else if ($(window).width() >= 1039 && $(window).width() <= 1492) {
+      var width = $('#gallery').width();
+      $('.galleryImage').width((width/3)-3);
+    }
+    else if ($(window).width() <= 1038 && $(window).width() >= 665) {
+      var width = $('#gallery').width();
+      $('.galleryImage').width((width/2)-3);
+    }
+    else {
+    
+    }
+  });
+</script>
+
+<script type="text/javascript">
+
+
+  $(document).ready(function () {
+
+    if ($(window).width() >= 1493) {
+
+var width = $('#gallery').width();
+$('.galleryImage').width((width/4)-3);
+
+
+}
+else if ($(window).width() >= 1039 && $(window).width() <= 1492) {
+var width = $('#gallery').width();
+$('.galleryImage').width((width/3)-3);
+}
+else if ($(window).width() <= 1038 && $(window).width() >= 665) {
+var width = $('#gallery').width();
+$('.galleryImage').width((width/2)-3);
+}
+else {
+
+}
+
+  });
+</script>
 </body>
 <!-- <footer>
   <p><img src="../img/borderbathi.png"></p>
