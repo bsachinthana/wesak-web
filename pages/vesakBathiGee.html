@@ -494,19 +494,24 @@
 
       var width = $('#gallery').width();
       $('.galleryImage').width((width/4)-3);
+      $('.galleryImage').height(308);
 
     
     }
     else if ($(window).width() >= 1039 && $(window).width() <= 1492) {
       var width = $('#gallery').width();
       $('.galleryImage').width((width/3)-3);
+      $('.galleryImage').height(308);
     }
     else if ($(window).width() <= 1038 && $(window).width() >= 665) {
       var width = $('#gallery').width();
       $('.galleryImage').width((width/2)-3);
+      $('.galleryImage').height(308);
     }
     else {
-    
+      var width = $('#gallery').width();
+      $('.galleryImage').width((width)-3);
+      $('.galleryImage').height(172);
     }
   });
 </script>
@@ -520,19 +525,25 @@
 
 var width = $('#gallery').width();
 $('.galleryImage').width((width/4)-3);
+$('.galleryImage').height(308);
 
 
 }
 else if ($(window).width() >= 1039 && $(window).width() <= 1492) {
 var width = $('#gallery').width();
 $('.galleryImage').width((width/3)-3);
+$('.galleryImage').height(308);
 }
 else if ($(window).width() <= 1038 && $(window).width() >= 665) {
 var width = $('#gallery').width();
 $('.galleryImage').width((width/2)-3);
+$('.galleryImage').height(308);
 }
 else {
-
+  var width = $('#gallery').width();
+  $('.galleryImage').width((width)-3);
+  $('.galleryImage').height(172);
+ 
 }
 
   });
