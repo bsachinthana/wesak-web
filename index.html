@@ -1,127 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Bootstrap CSS -->
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-			crossorigin="anonymous"
-		/>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="shortcut icon" href="./img/title_icon.png" />
-    <link rel="stylesheet" href="./pages/preloader/css/normalize.css">
-	<link rel="stylesheet" href="./pages/preloader/css/main.css">
-	<script src="./pages/preloader/js/vendor/modernizr-2.6.2.min.js"></script>
-		<style>
-			/* build your own custom Bootstrap theme:
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+
+  <link rel="shortcut icon" href="./img/title_icon.png" />
+  <link rel="stylesheet" href="./pages/preloader/css/normalize.css">
+  <link rel="stylesheet" href="./pages/preloader/css/main.css">
+  <script src="./pages/preloader/js/vendor/modernizr-2.6.2.min.js"></script>
+  <style>
+    /* build your own custom Bootstrap theme:
    https://themestr.app
 */
-			@keyframes fadeIn {
-				0% {
-					opacity: 0;
-				}
-
-				100% {
-					opacity: 1;
-				}
-			}
-
-			.wrapper .row {
-				height: 50%;
-			}
-
-			.wrapper .col {
-				height: 100%;
-				opacity: 0;
-			}
-
-      #wrapperDiv{
-        transition: padding 0.5s ease-in-out;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
       }
 
-			.wrapper .row:nth-of-type(1) .col:nth-of-type(1) {
-				animation: fadeIn 1s ease-in-out 0s forwards;
-			}
+      100% {
+        opacity: 1;
+      }
+    }
 
-			.wrapper .row:nth-of-type(1) .col:nth-of-type(2) {
-				animation: fadeIn 1s ease-in-out 0.25s forwards;
-			}
+    .wrapper .row {
+      height: 50%;
+    }
 
-			.wrapper .row:nth-of-type(1) .col:nth-of-type(3) {
-				animation: fadeIn 1s ease-in-out 0.5s forwards;
-			}
+    .wrapper .col {
+      height: 100%;
+      opacity: 0;
+    }
 
-			.wrapper .row:nth-of-type(2) .col:nth-of-type(1) {
-				margin-left: 8.25%;
-				animation: fadeIn 1s ease-in-out 0.75s forwards;
-			}
+    #wrapperDiv {
+      transition: padding 0.5s ease-in-out;
+    }
 
-			.wrapper .row:nth-of-type(2) .col:nth-of-type(2) {
-				margin-right: 8.25%;
-				animation: fadeIn 1s ease-in-out 1s forwards;
-			}
+    .wrapper .row:nth-of-type(1) .col:nth-of-type(1) {
+      animation: fadeIn 1s ease-in-out 0s forwards;
+    }
 
-			.wrapper .row:nth-of-type(2) {
-				margin-top: -6.25%;
-			}
+    .wrapper .row:nth-of-type(1) .col:nth-of-type(2) {
+      animation: fadeIn 1s ease-in-out 0.25s forwards;
+    }
 
-			.hex:hover {
-				fill: blue;
-			}
+    .wrapper .row:nth-of-type(1) .col:nth-of-type(3) {
+      animation: fadeIn 1s ease-in-out 0.5s forwards;
+    }
 
-			svg:hover {
-				transform: scale(1.1, 1.1);
-			}
+    .wrapper .row:nth-of-type(2) .col:nth-of-type(1) {
+      margin-left: 8.25%;
+      animation: fadeIn 1s ease-in-out 0.75s forwards;
+    }
 
-			svg {
-				transition: transform 0.25s ease-in;
-				/*border: 1px solid red;*/
-			}
+    .wrapper .row:nth-of-type(2) .col:nth-of-type(2) {
+      margin-right: 8.25%;
+      animation: fadeIn 1s ease-in-out 1s forwards;
+    }
 
-			.wrapper .row:nth-of-type(1) .col:nth-of-type(2) svg polygon {
-				fill: #f1c40f;
-			}
+    @media (min-width: 576px) {
+      .wrapper .row:nth-of-type(2) {
+        margin-top: -4.75%;
+      }
+    }
 
-			.wrapper .row:nth-of-type(1) .col:nth-of-type(3) svg polygon {
-				fill: #b8e994;
-			}
+    .hex:hover {
+      fill: blue;
+    }
 
-			.wrapper .row:nth-of-type(2) .col:nth-of-type(1) svg polygon {
-				fill: #e55039;
-			}
+    svg:hover {
+      transform: scale(1.1, 1.1);
+    }
 
-			.wrapper .row:nth-of-type(2) .col:nth-of-type(2) svg polygon {
-				fill: #38ada9;
-			}
+    svg {
+      transition: transform 0.25s ease-in;
+      /*border: 1px solid red;*/
+    }
 
-			.header {
-				height: 200px;
-				opacity: 0.5;
-			}
+    .header {
+      height: 200px;
+      opacity: 0.5;
+    }
 
-			body,
-			div.container-fluid {
-				height: 100vh;
-				overflow: hidden;
-			}
+    body,
+    div.container-fluid {
+      height: 100vh;
+    }
 
-			body {
-				background: url("bg.jpg");
-				background-size: cover;
-			}
-
-
-      .borderSpam
-    {
-      z-index: -1;
+    body {
+      background: url("bg.jpg");
+      background-size: cover;
     }
 
 
+    .borderSpam {
+      z-index: -1;
+    }
 
     .box {
       transform: translate(-3%, 7%);
@@ -174,10 +153,12 @@
       box-sizing: border-box;
 
     }
-.box:hover {
-  opacity: 1;
-  background-color: rgb(226, 226, 238);
-  }
+
+    .box:hover {
+      opacity: 1;
+      background-color: rgb(226, 226, 238);
+    }
+
     .box span:nth-child(1) {
       transform: rotate(0deg);
     }
@@ -230,49 +211,43 @@
     @media only screen and (max-width: 620px) {
 
 
-body {
-  font-family: sans-serif;
-  background-size: cover;
-}
+      body {
+        font-family: sans-serif;
+        background-size: cover;
+      }
 
-#rotatedRectangle
-{
-  height: 278px !important;
-}
-
-
-}
-
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-}
+      #rotatedRectangle {
+        height: 278px !important;
+      }
 
 
+    }
 
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
 
+    :root {
+      --width: 100%;
+      --height: 100%;
+      --border-width: 200px;
+      --border-height: 200px;
 
+    }
 
+    html,
+    body {
+      /* background:radial-gradient(mistyrose,pink); */
+      height: 100%;
+      width: 100%;
+      /*position:relative;*/
+    }
 
-:root{
-  --width: 100%;
-  --height: 100%;
-  --border-width: 200px;
-  --border-height: 200px;
-
-}
-
-html,body{
-  /* background:radial-gradient(mistyrose,pink); */
-  height:100%;
-  width:100%;
-  position:relative;
-  overflow:hidden;
-}
-
+    /* 
 .gallery{
   position:relative;
   height:100%;
@@ -281,364 +256,325 @@ html,body{
 
 .gallery:after{
   content:'';
-}
+} */
 
-.shadow{
-  position: absolute;
-  top: 500px;
-  left: 100px;
-  width: 500px;
-  height: 40px;
-  border-radius: 50%;
-  background: radial-gradient(#805d78,rgba(0,0,0,0) 70%);
-}
+    .shadow {
+      position: absolute;
+      top: 500px;
+      left: 100px;
+      width: 500px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(#805d78, rgba(0, 0, 0, 0) 70%);
+    }
 
-img.h1{
-  width:var(--width);
-  height:var(--height);
-}
+    img.h1 {
+      width: var(--width);
+      height: var(--height);
+    }
 
-.clipped-border{
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-   padding:5px;
-   background:linear-gradient(grey,lightgrey);
-   width:var(--border-width);
-   height:var(--border-height);
-   max-height:338px;
-   max-width:349px;
-   height: var(--height);
-   width:var(--width);
-   transition:transform 0.2s;
-   position:absolute;
-   cursor:pointer;
-}
+    /* .clipped-border {
+      -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      padding: 5px;
+      background: linear-gradient(grey, lightgrey);
+      width: var(--border-width);
+      height: var(--border-height);
+      max-height: 338px;
+      max-width: 349px;
+      height: var(--height);
+      width: var(--width);
+      transition: transform 0.2s;
+      position: absolute;
+      cursor: pointer;
+    } */
 
 
+    /* 
+    .clipped-border:before {
+      content: '';
+      position: absolute;
+      opacity: 0.5;
+      width: 470px;
+      height: 70px;
+      background: white;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transform: rotate(45deg);
+      transition: transform 0.5s;
+    }
 
-.clipped-border:before{
-  content:'';
-  position:absolute;
-  opacity:0.5;
-  width:470px;
-  height:70px;
-  background:white;
-  top:0;
-  left:0;
-  z-index:1;
-  transform:rotate(45deg);
-  transition:transform 0.5s;
-}
+    .clipped-border:hover:before {
+      transform: translate(-100px, 400%) rotate(45deg);
+      transition: transform 0.5s;
+    } */
 
-.clipped-border:hover:before{
-  transform: translate(-100px,400%) rotate(45deg);
-  transition:transform 0.5s;
-}
-
-/* one */
-.clipped-border:nth-child(1){
+    /* one */
+    /* .clipped-border:nth-child(1){
   top:0;
   left:170px;
-}
+} */
 
-/* four */
-.clipped-border:nth-child(2){
+    /* four */
+    /* .clipped-border:nth-child(2){
   top:275px;
   left:330px;
-}
+} */
 
-/* second */
-.clipped-border:nth-child(3){
+    /* second */
+    /* .clipped-border:nth-child(3){
   top:0;
   left:510px;
-}
+} */
 
-/* five */
-.clipped-border:nth-child(4){
+    /* five */
+    /* .clipped-border:nth-child(4){
   top:275px;
   left:680px;
-}
+} */
 
-/* third */
-.clipped-border:nth-child(5){
+    /* third */
+    /* .clipped-border:nth-child(5){
   top:0;
   left:847px;
-}
+} */
 
-#clipped {
--webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    #clipped {
+      -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 
-}
-
-.clipped-border:hover{
-  transform:scale(1.2);
-  transition:transform 0.2s;
-  z-index:10;
-}
-
-
-@media screen and (max-width:500px){
-  .clipped-border{
-    width:100px;
-    height:100px;
-  }
-  
-  .clipped-border:nth-child(1){
-  top:0;
-  left:0;
-}
-  .clipped-border:nth-child(2){
-    top:0;
-    left:100px;
-  }
-  
-  .clipped-border:nth-child(3){
-    left:200px;
-  }
-  
-  .clipped-border:nth-child(4){
-    top:82px;
-    left:50px;
-  }
-  
-  .clipped-border:nth-child(5){
-    top:82px;
-    left:150px;
-  }
-} 
-
-
-html,body {
-    width:100vw;
-    height: 100vh;
-    margin: 0;
-}
-#myVideo {
-    position:fixed;
-    z-index: -1;
-}
-@media (min-aspect-ratio: 16/9) {
-    #myVideo {
-        width:100%;
-        height: auto;
     }
-}
-@media (max-aspect-ratio: 16/9) {
-    #myVideo { 
-        width:auto;
-        height: 100%;
+
+    .clipped-border:hover {
+      transform: scale(1.2);
+      transition: transform 0.2s;
+      z-index: 10;
     }
-}
-@media (max-width: 767px) {
-    #myVideo {
-        /* display: none; */
+
+    #wrapperDiv img {
+      width: 100%;
+      height: auto;
     }
+
+    @media (max-width: 575.98px) {
+
+      .wrapper .row:nth-of-type(1) div[class*="col-"]:nth-of-type(odd) {
+        padding-right : 15% !important;
+      }
+
+      .wrapper .row:nth-of-type(1) div[class*="col-"]:nth-of-type(even) {
+        padding-left : 15% !important;
+      }
+
+      .wrapper .row:nth-of-type(2) div[class*="col-"]:nth-of-type(even) {
+        padding-right : 15% !important;
+      }
+
+      .wrapper .row:nth-of-type(2) div[class*="col-"]:nth-of-type(odd) {
+        padding-left : 15% !important;
+      }
+
+      .wrapper .row {
+        align-content: center !important;
+      }
+
+    }
+
+    /* @media screen and (max-width:500px) {
+      .clipped-border {
+        width: 100px;
+        height: 100px;
+      }
+
+      .clipped-border:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .clipped-border:nth-child(2) {
+        top: 0;
+        left: 100px;
+      }
+
+      .clipped-border:nth-child(3) {
+        left: 200px;
+      }
+
+      .clipped-border:nth-child(4) {
+        top: 82px;
+        left: 50px;
+      }
+
+      .clipped-border:nth-child(5) {
+        top: 82px;
+        left: 150px;
+      }
+    } */
+
+
+    html,
     body {
+      min-width: 100vw;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    #myVideo {
+      position: fixed;
+      z-index: -1;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+      #myVideo {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+      #myVideo {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #myVideo {
+        /* display: none; */
+      }
+
+      body {
         /* background: url('poster.jpg'); */
         background-size: cover;
+      }
     }
-}
+  </style>
+  <title>Simcentric Vesak Kalapya 2021</title>
+</head>
 
-		</style>
-		<title>Simcentric Vesak Kalapya 2021</title>
-	</head>
+<body>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
 
-	<body>
-    <div id="loader-wrapper">
-			<div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right">
+      <h1 style="text-align: center;padding-top: 10%;color: #151313;">
+        සිම්සෙන්ට්‍රික් වෙසක් කලාපය 2021
+      </h1>
+    </div>
 
-			<div class="loader-section section-left"></div>
-            <div class="loader-section section-right">
-              <h1 style="text-align: center;padding-top: 10%;color: #151313;">
-                සිම්සෙන්ට්‍රික් වෙසක් කලාපය 2021
-              </h1>
-            </div>
+  </div>
 
-		</div>
+  <video autoplay muted loop id="myVideo">
+    <source src="./img/bg_video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="container-fluid min-vh-100 padding d-flex flex-column">
 
-    <video autoplay muted loop id="myVideo">
-      <source src="./img/bg_video.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-		<div class="container-fluid min-vh-100 padding d-flex flex-column">
-      
-			<div class="row ">
+    <div class="row ">
 
-        <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
-          <a class="navbar-brand" href="../index.html"><img src="./img/home_icon.png" height="40px" width="40px"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse" style="flex-grow: inherit;" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
-              <li class="nav-item" style="margin-right: 14px;">
-                <div class="box">
-                  <span class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <a class="nav-link" href="./pages/vesakThorana.html">වෙසක් තොරණ</a>
-                </div>
-              </li>
-              <li class="nav-item" style="margin-right: 14px;">
-                <div class="box">
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <a class="nav-link" href="./pages/vesakPaniwida.html">වෙසක් පණිවිඩ</a>
-                </div>
-              </li>
-              <li class="nav-item" style="margin-right: 14px;">
-                <div class="box">
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <a class="nav-link" href="./pages/vesakKudu.html">වෙසක් කුඩු</a>
-                </div>
-              </li>
-              <li class="nav-item" style="margin-right: 14px; pointer-events: auto">
-                <div class="box">
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <a class="nav-link" href="./pages/vesakNirmana.html">වෙසක් නිර්මාණ</a>
-                </div>
-              </li>
-              <li class="nav-item" style="margin-right: 14px;">
-                <div class="box">
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <span  class="borderSpam"></span>
-                  <span  class="borderSpam" id="rotatedRectangle"></span>
-                  <a class="nav-link" href="./pages/vesakBathiGee.html">වෙසක් බැතිගී</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-			<div class="row flex-grow-1 wrapper-row">
-				<div
-					id="wrapperDiv"
-					class="col-md-8 offset-md-4 col-sm-10 offset-sm-2 wrapper"
-					onresize="calcHexDimms()"
-          style=" margin-top: 4%;"
-				>
-					<!-- <div class="row d-flex justify-content-between">
-						<div class="col col-12 col-sm-4">
-							<a href="http://www.google.com">
-								<svg height="100%" width="100%" viewBox="0 0 100 100">
-									<polygon
-										height="100%"
-										width="100%"
-										class="hex"
-										points="50 0, 100 25,100 75, 50 100, 0 75,0 25"
-										fill="#2ecc71"
-									/>
-								</svg>
-							</a>
-						</div>
-						<div class="col col-12 col-sm-4">
-							<svg height="100%" width="100%" viewBox="0 0 100 100">
-								<polygon
-									class="hex"
-									points="50 0, 100 25,100 75, 50 100, 0 75,0 25"
-									fill="#2ecc71"
-								/>
-							</svg>
-						</div>
-						<div class="col col-12 col-sm-4">
-							<svg
-								height="100%"
-								width="100%"
-								viewBox="0 0 100
-                      100"
-							>
-								<polygon
-									class="hex"
-									points="50 0, 100 25,100 75, 50 100, 0 75,0 25"
-									fill="#2ecc71"
-								/>
-							</svg>
-						</div>
-					</div>
-					<div class="row d-flex justify-content-center">
-						<div class="col col-4">
-							<svg height="100%" width="100%" viewBox="0 0 100 100">
-								<polygon
-									class="hex"
-									points="50 0, 100 25,100 75, 50 100, 0 75,0 25"
-									fill="#2ecc71"
-								/>
-							</svg>
-						</div>
-						<div class="col col-4">
-							<svg height="100%" width="100%" viewBox="0 0 100 100">
-								<polygon
-									class="hex"
-									points="50 0, 100 25,100 75, 50 100, 0 75,0 25"
-									fill="#2ecc71"
-								/>
-							</svg>
-						</div>
-					</div> -->
+      <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+        <a class="navbar-brand" href="../index.html"><img src="./img/home_icon.png" height="40px" width="40px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-
-
-
-
-					<div class = "gallery">
-						<div class="clipped-border">
-              <a href="./pages/vesakThorana.html">
-						  <img class="h1" src="./img/V1 .png" id="clipped">
+        <div class="collapse navbar-collapse" style="flex-grow: inherit;" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+            <li class="nav-item" style="margin-right: 14px;">
+              <div class="box">
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./pages/vesakThorana.html">වෙසක් තොරණ</a>
+              </div>
+            </li>
+            <li class="nav-item" style="margin-right: 14px;">
+              <div class="box">
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./pages/vesakPaniwida.html">වෙසක් පණිවිඩ</a>
+              </div>
+            </li>
+            <li class="nav-item" style="margin-right: 14px;">
+              <div class="box">
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./pages/vesakKudu.html">වෙසක් කුඩු</a>
+              </div>
+            </li>
+            <li class="nav-item" style="margin-right: 14px; pointer-events: auto">
+              <div class="box">
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./pages/vesakNirmana.html">වෙසක් නිර්මාණ</a>
+              </div>
+            </li>
+            <li class="nav-item" style="margin-right: 14px;">
+              <div class="box">
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <span class="borderSpam"></span>
+                <span class="borderSpam" id="rotatedRectangle"></span>
+                <a class="nav-link" href="./pages/vesakBathiGee.html">වෙසක් බැතිගී</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="row ">
+      <div id="wrapperDiv" class="col-12 col-lg-9 offset-lg-3 col-md-10 offset-md-2 col-xl-6 offset-xl-6 wrapper" style=" margin-top: 2em;">
+        <div class="row"> <!-- gallery-->
+          <div class="clipped-border col-12 col-sm-4">
+            <a href="./pages/vesakThorana.html">
+              <img src="./img/V1.png">
             </a>
-						</div>
-						<div class="clipped-border">
-              <a href="./pages/vesakKudu.html">
-             
-						  <img class="h1" src="./img/V2.png" id="clipped">
-              </a>
-						</div>
-						<div class="clipped-border">
-              <a href="./pages/vesakPaniwida.html">
-              
-						  <img class="h1" src="./img/V3.png" id="clipped">
-              </a>
-						</div>
-						  <div class="clipped-border">
-                <a href="./pages/vesakBathiGee.html">
-						  <img class="h1" src="./img/V4.png" id="clipped">
-              </a>
-						</div>
-						  <div class="clipped-border">
-                
-                  <a href="./pages/vesakNirmana.html">
-						  <img class="h1" src="./img/V5.png" id="clipped">
-              </a>
-						</div>
-						
-					  </div>
-				</div>
-			</div>
-		</div>
+          </div>
+          <div class="clipped-border col-12 col-sm-4">
+            <a href="./pages/vesakKudu.html">
+              <img src="./img/V2.png">
+            </a>
+          </div>
+          <div class="clipped-border col-12 col-sm-4">
+            <a href="./pages/vesakPaniwida.html">
+              <img src="./img/V3.png">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-4 offset-sm-2">
+            <a href="./pages/vesakBathiGee.html">
+              <img src="./img/V4.png">
+            </a>
+          </div>
+          <div class="col-12 col-sm-4 clipped-border">
+            <a href="./pages/vesakNirmana.html">
+              <img src="./img/V5.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-		<!-- Optional JavaScript; choose one of the two! -->
+  <!-- Optional JavaScript; choose one of the two! -->
 
-		<!-- Option 1: Bootstrap Bundle with Popper -->
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-			crossorigin="anonymous"
-		></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			function calcHexDimms() {
 				var wrapper = document.getElementById("wrapperDiv");
@@ -679,44 +615,44 @@ html,body {
 			};
 			window.onload = setTimeout(calcHexDimms, 100);
 		</script> -->
-    <script>
-        $(document).ready(function () {
+  <script>
+    $(document).ready(function () {
 
-var divHeight = $('.box').width();
-$('span#rotatedRectangle').each(function () {
- 
-  var selfP = $(this)[0].parentNode.offsetWidth;
-  var self = $(this);
+      var divHeight = $('.box').width();
+      $('span#rotatedRectangle').each(function () {
 
-  self.height(selfP-4);
+        var selfP = $(this)[0].parentNode.offsetWidth;
+        var self = $(this);
 
-});
+        self.height(selfP - 4);
 
-});
-    </script>
-<script>
-    $(document).ready(function() {
+      });
 
-    $(".navbar-toggler").click(function(){
-        
-      if($(this).data('clicked')) {
-        $(this).data('clicked', false);
-        $('.collapse').removeClass('show');
-      }
-      else
-      {
-        $(this).data('clicked', true);
-        $('.collapse').addClass('show');
-      }
-       
-
-});
     });
-</script>
+  </script>
+  <script>
+    $(document).ready(function () {
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-	<script src="./pages/preloader/js/main.js"></script>
+      $(".navbar-toggler").click(function () {
 
-	</body>
+        if ($(this).data('clicked')) {
+          $(this).data('clicked', false);
+          $('.collapse').removeClass('show');
+        }
+        else {
+          $(this).data('clicked', true);
+          $('.collapse').addClass('show');
+        }
+
+
+      });
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="./pages/preloader/js/main.js"></script>
+
+</body>
+
 </html>
