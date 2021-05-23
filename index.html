@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="./pages/preloader/css/normalize.css">
   <link rel="stylesheet" href="./pages/preloader/css/main.css">
   <script src="./pages/preloader/js/vendor/modernizr-2.6.2.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;700&display=swap" rel="stylesheet">
   <style>
     /* build your own custom Bootstrap theme:
    https://themestr.app
@@ -295,19 +297,29 @@
     @media (max-width: 575.98px) {
 
       .wrapper .row:nth-of-type(1) div[class*="col-"]:nth-of-type(odd) {
-        padding-right : 15% !important;
+        /* padding-right : 15% !important;
+        padding-top: 3% !important; */
+        width: 71vw;
       }
 
       .wrapper .row:nth-of-type(1) div[class*="col-"]:nth-of-type(even) {
-        padding-left : 15% !important;
+        /* padding-left : 15% !important;
+        padding-top: 3% !important; */
+        width: 71vw;
+        margin-left: 20% !important;
       }
 
       .wrapper .row:nth-of-type(2) div[class*="col-"]:nth-of-type(even) {
-        padding-right : 15% !important;
+        /* padding-right : 15% !important;
+        padding-top: 3% !important; */
+        width: 71vw;
       }
 
       .wrapper .row:nth-of-type(2) div[class*="col-"]:nth-of-type(odd) {
-        padding-left : 15% !important;
+        /* padding-left : 15% !important;
+        padding-top: 3% !important; */
+        width: 71vw;
+        margin-left: 20% !important;
       }
 
       .wrapper .row {
@@ -369,6 +381,7 @@
       box-shadow: 0 0 8px 15px #fff;
     }
 
+    
     #wrapperDiv a:after{
       transition-delay: 10ms;
       transition-timing-function: ease-in-out;
@@ -510,32 +523,44 @@
         </div>
       </nav>
     </div> -->
+    
+    <div class="row mobileTitle" style=" margin-left: 10%;margin-right: 11%;margin-top: 2%;">
+      <h1 class="sectionHeader"
+        style=" box-shadow: 0 0 10px 3px; text-align: center; font-family: 'Abhaya Libre', serif; background-image: linear-gradient(to right, rgb(227 254 249), rgb(85 186 210), rgb(119 128 236));    margin-bottom: 96px;
+        border-radius: 45px;
+        color: rgb(25 19 33);
+        margin-top: 17px;
+        font-size: 28px;">
+        සිම්සෙන්ට්‍රික් Digital වෙසක් කලාපය
+      </h1>
+
+    </div>
     <div class="row ">
-      <div id="wrapperDiv" class="col-12 col-lg-9 offset-lg-3 col-md-10 offset-md-2 col-xl-6 offset-xl-6 wrapper" style=" margin-top: 5em;">
+      <div id="wrapperDiv" class="col-12 col-lg-9 offset-lg-3 col-md-10 offset-md-2 col-xl-6 offset-xl-6 wrapper" style="margin-top: 5%;">
         <div class="row"> <!-- gallery-->
-          <div class="col-12 col-sm-4">
+          <div class="clipped-border col-12 col-sm-4">
             <a href="./pages/vesakThorana.html">
               <img src="./img/V1.png">
             </a>
           </div>
-          <div class="col-12 col-sm-4">
+          <div class="clipped-border col-12 col-sm-4">
             <a href="./pages/vesakKudu.html">
               <img src="./img/V2.png">
             </a>
           </div>
-          <div class="col-12 col-sm-4">
+          <div class="clipped-border col-12 col-sm-4">
             <a href="./pages/vesakPaniwida.html">
               <img src="./img/V3.png">
             </a>
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-sm-4 offset-sm-2">
+          <div class="clipped-border col-12 col-sm-4 offset-sm-2">
             <a href="./pages/vesakBathiGee.html">
               <img src="./img/V4.png">
             </a>
           </div>
-          <div class="col-12 col-sm-4">
+          <div class="clipped-border col-12 col-sm-4">
             <a href="./pages/vesakNirmana.html">
               <img src="./img/V5.png">
             </a>
@@ -544,7 +569,8 @@
       </div>
     </div>
   </div>
-
+  <a href='https://freehitcounters.org/' style="visibility: hidden;">free HitCounters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=c304572386c7bca560c522efbd486fa7e7597dbb'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/830874/t/0"></script>
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -626,6 +652,34 @@
       });
     });
   </script>
+
+<script>
+  $(document).ready(function () {
+
+    if ($(window).width() >= 1024) 
+    {
+      $(".mobileTitle").hide();
+    }
+    else {
+     
+      $(".mobileTitle").show();
+    }
+  
+  });
+</script>
+
+<script>
+  $(window).resize(function () {
+    if ($(window).width() >= 1024) 
+    {
+      $(".mobileTitle").hide();
+    }
+    else {
+     
+      $(".mobileTitle").show();
+    }
+  });
+</script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
