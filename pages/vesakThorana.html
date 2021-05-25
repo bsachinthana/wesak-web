@@ -27,7 +27,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;700&display=swap" rel="stylesheet">
-
+  <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
   <script src="../pages/preloader/js/vendor/modernizr-2.6.2.min.js"></script>
 
 
@@ -225,7 +225,7 @@
       position: relative;
       overflow: hidden;
       width: 100%;
-      padding-top: 48.25%;
+      /* padding-top: 48.25%; */
       /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     }
 
@@ -612,13 +612,32 @@
 
         <div class="grid backgrd1">
           <div class="container_one">
-            
+            <video
+            id="my-video"
+            class="video-js"
+            controls
+            preload="auto"
+            width="640"
+            height="264"
+            poster="../img/thorana_thmbnail.PNG"
+            data-setup="{}"
+          >
+            <!-- <source src="MY_VIDEO.mp4" type="video/mp4" /> -->
+            <source src="https://firebasestorage.googleapis.com/v0/b/simct-wesak-2021.appspot.com/o/videos%2FVesakthorana-1.webm?alt=media&token=b2435548-edec-4c5f-94ed-d722e30d4485" type="video/webm" />
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank"
+                >supports HTML5 video</a
+              >
+            </p>
+          </video>
             
             <!-- <iframe width="420" height="315" class="responsive-iframe"src="https://www.youtube.com/embed/2qDvwSi9QaA" frameborder="2" allowfullscreen></iframe> -->
-            <video playsinline autoplay loop muted class="responsive-iframe" poster="../img/thorana_thmbnail.PNG">
+            <!-- <video playsinline autoplay loop muted controls class="responsive-iframe" poster="../img/thorana_thmbnail.PNG">
               <source src="https://firebasestorage.googleapis.com/v0/b/simct-wesak-2021.appspot.com/o/videos%2FVesakthorana-1.webm?alt=media&token=b2435548-edec-4c5f-94ed-d722e30d4485" type="video/webm">
               Your browser does not support HTML5 video.
-            </video>
+            </video> -->
           </div>
         </div>
 
@@ -629,7 +648,7 @@
 
 
     <!-- Optional JavaScript; choose one of the two! -->
-
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
