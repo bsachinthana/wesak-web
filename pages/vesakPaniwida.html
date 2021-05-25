@@ -916,6 +916,11 @@
 
     </div>
     <div class="container-fluid min-vh-100 padding d-flex flex-column">
+        
+            <button type="checkbox" class="toggle" id="unmuteButton" style="background: url(../img/mute.png) no-repeat; width: 14vw;
+            height: 6vh;
+            position: fixed;
+            border: none;"></button>
         <div class="row ">
 
             <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
@@ -1037,6 +1042,26 @@
                                 <a class="hexLink" id="9" href="#">
                                     <img src="../img/paniwida/employee/9.jpg" alt="" />
                                     <h1>Gayan Ranasinghe</h1>
+                                    <p>Technical Lead</p>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="hex">
+                            <div class="hexIn">
+                                <a class="hexLink" id="22" href="#">
+                                    <img src="../img/paniwida/employee/22.jpg" alt="" />
+                                    <h1>Pavithra Silva</h1>
+                                    <p>Associate Technical Lead</p>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="hex">
+                            <div class="hexIn">
+                                <a class="hexLink" id="23" href="#">
+                                    <img src="../img/paniwida/employee/23.jpg" alt="" />
+                                    <h1>Waruna Tennakoon</h1>
                                     <p>Technical Lead</p>
                                 </a>
                             </div>
@@ -1207,7 +1232,10 @@
                 </div>
             </div>
         </div>
-
+        <audio loop="loop" id="audioBG" >
+            <source src="../img/Buddanubawena.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
@@ -1316,7 +1344,9 @@
                       "සඳහම් සිසිලෙන් සිත් නිවී සැනසෙන, ලෝ සතුන්ගේ රෝග බිය දුරු වන පින්බර වෙසක් පොහොයක් වේවා..!!",
                      "ලෝකවාසී සියලු සත්වයන්ගේ සිත් නිවී සැනසෙන, තුනුරුවන්ගේ ආශිර්වාදයෙන් ලොවම සුවපත්වන උතුම් පින්බර වෙසක් මන්ගල්‍යක් වේවා..",
                     "සම්බුදු සිසිලෙන් විශ්වයම නිවී සැනසෙන පින්බර වෙසක් මංගල්‍යයක් වේවා.",
-                    "වෙසක් සඳේ මුදු එලියෙන් ඇහෙනා හැම බන පදයෙන් දැවෙනා සිත් සැනහී යන පින්බර වෙසඟක් වේවා සැමහට...!!"];
+                    "වෙසක් සඳේ මුදු එලියෙන් ඇහෙනා හැම බන පදයෙන් දැවෙනා සිත් සැනහී යන පින්බර වෙසඟක් වේවා සැමහට...!!",
+                    "සම්බුදු සිසිලෙන් නිවී සැනසෙන, ධර්මාලෝකයෙන් මෝහාන්දකාරය දුරුවන, සැම සිත් සුවපත් වන පින්බර වෙසක් මංගල්ලයක් වේවා.",
+                      "'ආරෝග්‍යා පරමා ලාභා' ලෙස බුදුන් විසින් දෙසු ධර්මය කොවිඩ් වසංගතය විසින් මනාව පසක් කරමින් තිබෙනා මොහොතක, සම්බුද්ධ තෙමඟුල සමරන මේ වෙසක් දිනයේ සියළු ලෝක වාසීන්ටත්, SimCentric පවුලේ සියළු දෙනාටත් නිරෝගී බව පතමි."];
                     $('.gallery').addClass('pop');
                     $popup = $('<div class="popup" />').appendTo($('body'));
                     $fig = $('<figure></figure>').appendTo($('.popup'));
@@ -1392,6 +1422,25 @@
                 }
             });
         </script>
+        <script>
+            document.getElementById('unmuteButton').addEventListener('click', function() {
+              var property =  document.getElementById('unmuteButton');
+              if(property.className == 'toggle')
+              {
+                $('#unmuteButton').css('background',' url(../img/volume.png) no-repeat');
+                $('#audioBG').get(0).play();
+                property.className = 'toggled';
+              }
+              else
+              {
+                $('#unmuteButton').css('background',' url(../img/mute.png) no-repeat');
+                $('#audioBG').get(0).pause();
+                property.className = 'toggle';
+          
+              }
+              
+          });
+          </script>
     </div>
     <footer class="footer-distributed" style="opacity: 0.95;">
 

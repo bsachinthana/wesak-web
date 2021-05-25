@@ -567,6 +567,10 @@
   </div>
 
   <div class="container-fluid min-vh-100 padding d-flex flex-column">
+    <button type="checkbox" class="toggle" id="unmuteButton" style="background: url(../img/mute.png) no-repeat; width: 14vw;
+    height: 6vh;
+    position: fixed;
+    border: none;z-index:2"></button>
     <div class="row ">
 
       <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
@@ -764,6 +768,10 @@
 
       </div>
     </div>
+    <audio loop="loop" id="audioBG" >
+      <source src="../img/Buddanubawena.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
   </div>
 
   <footer class="footer-distributed" style="opacity: 0.95;">
@@ -990,6 +998,25 @@
     });
 
 
+  </script>
+  <script>
+    document.getElementById('unmuteButton').addEventListener('click', function() {
+      var property =  document.getElementById('unmuteButton');
+      if(property.className == 'toggle')
+      {
+        $('#unmuteButton').css('background',' url(../img/volume.png) no-repeat');
+        $('#audioBG').get(0).play();
+        property.className = 'toggled';
+      }
+      else
+      {
+        $('#unmuteButton').css('background',' url(../img/mute.png) no-repeat');
+        $('#audioBG').get(0).pause();
+        property.className = 'toggle';
+  
+      }
+      
+  });
   </script>
 </body>
 <!--  

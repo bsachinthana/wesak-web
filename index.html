@@ -465,8 +465,12 @@
     <source src="./img/bg_video.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
+  
   <div class="container-fluid min-vh-100 padding d-flex flex-column">
-
+    <button type="checkbox" class="toggle" id="unmuteButton" style="background: url(./img/mute.png) no-repeat; width: 14vw;
+    height: 6vh;
+    position: fixed;
+    border: none;"></button>
     <!-- <div class="row ">
 
       <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
@@ -572,7 +576,15 @@
         </div>
       </div>
     </div>
+    <audio loop="loop" id="audioBG" >
+      <source src="./img/Buddanubawena.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    
 
+    
+
+   
     <!-- visitor Counter -->
     <a href='https://freehitcounters.org/' style="visibility: hidden;">free HitCounters</a> 
     <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=c304572386c7bca560c522efbd486fa7e7597dbb'></script>
@@ -673,10 +685,32 @@
      
       $(".mobileTitle").show();
     }
-  
-  });
-</script>
 
+    
+  });
+
+  
+</script>
+<script>
+  document.getElementById('unmuteButton').addEventListener('click', function() {
+    var property =  document.getElementById('unmuteButton');
+    if(property.className == 'toggle')
+    {
+      $('#unmuteButton').css('background',' url(./img/volume.png) no-repeat');
+      $('#audioBG').get(0).play();
+      property.className = 'toggled';
+    }
+    else
+    {
+      $('#unmuteButton').css('background',' url(./img/mute.png) no-repeat');
+      $('#audioBG').get(0).pause();
+      property.className = 'toggle';
+
+    }
+    console.log($(this).val());
+    //$('#audioBG').get(0).play();
+});
+</script>
 <script>
   $(window).resize(function () {
     if ($(window).width() >= 1024) 
