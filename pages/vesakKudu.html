@@ -44,9 +44,9 @@
 
     }
 
-    .grid {
+    .grid1 {
       margin-left: 10%;
-      margin-right: 2%;
+      margin-right: 11%;
       /* margin-top: 3%; */
     }
 
@@ -127,7 +127,7 @@
         width: 100%;
       }
 
-      .grid {
+      .grid1 {
         margin-left: 0px;
         margin-right: 0px;
         /* margin-top: 3%; */
@@ -549,6 +549,70 @@
       }
 
     }
+
+    main {
+      columns: 21pc;
+      column-gap: 20px;
+    }
+
+    article h3{
+      font: revert;
+    background: linear-gradient(to bottom right, #8571f5, #c6dafd);
+    text-align: center;
+    border-radius: 18.2px;
+    }
+
+article img {
+      transition: transform .2s;
+      width: 100%;
+      height: 100%;
+    }
+
+    article img:hover {
+      transform: scale(1.2);
+      /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+article {
+      break-inside: avoid-column;
+      margin-bottom: 1rem;
+    }
+
+
+    article {
+      padding: 2%;
+      border: 4px solid cornflowerblue;
+      border-radius: 5px;
+      background: #fff;
+    }
+
+    #slideshow,
+    #slideshow1,
+    #slideshow2,
+    #slideshow3 {
+  /* margin: 80px auto; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* padding: 10px; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+  position: relative;
+
+}
+
+#slideshow1 > div {
+  position: relative;
+}
+
+#slideshow2 > div {
+  position: relative;
+}
+#slideshow3 > div {
+  position: relative;
+}
   </style>
   <title>Simcentric Vesak Kalapya 2021</title>
 </head>
@@ -678,18 +742,111 @@
 
         </div>
         </div>
-        <div class="row" style=" margin-left: 10%;margin-right: 11%;margin-top: 2%;">
+      </div>
+    </div>
+        <div class="row" style=" margin-left: 10%;margin-right: 11%;margin-top: 2%; margin-bottom: 2%;">
           <h1 class="sectionHeader"
             style=" box-shadow: 0 0 10px 3px; text-align: center; font-family: 'Abhaya Libre', serif; background-image: linear-gradient(to right, rgb(211, 37, 37) ,   #e76b72 , rgb(223, 213, 80));;">
             සිම්සෙන්ට්‍රික්
             පවුලේ වෙසක් කූඩු</h1>
 
         </div>
-        <div class="grid backgrd1">
+        <div class="row">
+          <div class="col-12 wrapper">
+            <!-- Demo header-->
+        <div class="grid1 backgrd1">
+
+          <main>
+            <article>
+          
+              <img src="../img/vesakKudu/new/Haridhu/1.png">
+              <h3>හරිඳු අබේගුණරත්න</h3>
+            </article>
+          
+            <article>
+              <div id="slideshow">
+                <div>
+                  <img src="../img/vesakKudu/new/Harshana/1.jpg">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Harshana/2.png">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Harshana/3.jpg">
+                </div>
+          
+              </div>
+              <h3>හර්ෂන කුරුප්පු</h3>
+            </article>
+          
+          
+            <article>
+              <img src="../img/vesakKudu/new/Chandima/1.png">
+              <h3>චන්දිමා සෙනරත්</h3>
+            </article>
+          
+            <article>
+          
+              <img src="../img/vesakKudu/new/Gayan/1.jpg">
+          
+              <h3>ගයාන් රනසිංහ</h3>
+          
+            </article>
+            <article>
+              <div id="slideshow1">
+                <div>
+                  <img src="../img/vesakKudu/new/Harin/1.jpg">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Harin/2.jpg">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Harin/3.jpg">
+                </div>
+              </div>
+              <h3>හරිඳු ජයරත්න</h3>
+            </article>
+          
+            <article>
+              <div id="slideshow2">
+                <div>
+                  <img src="../img/vesakKudu/new/Hiruni/1.jpg">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Hiruni/2.jpg">
+                </div>
+              </div>
+              <h3>හිරුනි නිලක්ෂි</h3>
+            </article>
+            <article>
+              <div id="slideshow3">
+                <div>
+                  <img src="../img/vesakKudu/new/Nimandi/1.jpg">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Nimandi/2.jpg">
+                </div>
+              </div>
+              <h3>නිමන්දි නදීශා</h3>
+            </article>
+
+            <article>
+              <video playsinline autoplay loop muted class="responsive-iframe1" style="height: 100%;
+              width: 100%;">
+                <source src="../img/vesakKudu/new/Kushanthi/VID_28490908_042719_374.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <h3>කුශාන්ති විහංගනා</h3>
+            </article>
+            <article>
+          
+              <img src="../img/vesakKudu/new/Himaruk/1.jpeg">
+              <h3>හිමරුක් සිල්වා</h3>
+            </article>
+          </main>
 
 
-
-          <div class="grid-sizer"></div>
+          <!-- <div class="grid-sizer"></div>
           <div class="grid-item">
             <div class="grid-item-content">
               <img src="../img/vesakKudu/old/aravinda.jpg" style="height: 100%; width: 100%;">
@@ -763,12 +920,13 @@
                 <h1 style="font-size: medium;">වරුණ තෙන්නකෝන්</h1>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
+        </div>
+        </div>
 
-      </div>
-    </div>
+     
     <audio loop="loop" id="audioBG" >
       <source src="../img/Buddanubawena.mp3" type="audio/mp3">
       Your browser does not support the audio element.
@@ -1019,6 +1177,48 @@
       
   });
   </script>
+  <script>
+    $("#slideshow > div:gt(0)").hide();
+    $("#slideshow1 > div:gt(0)").hide();
+    $("#slideshow2 > div:gt(0)").hide();
+    $("#slideshow3 > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+
+setInterval(function() {
+  $('#slideshow1 > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow1');
+}, 5000);
+
+setInterval(function() {
+  $('#slideshow2 > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow2');
+}, 5000);
+
+setInterval(function() {
+  $('#slideshow3 > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow3');
+}, 5000);
+</script>
 </body>
 <!--  
   <footer>
