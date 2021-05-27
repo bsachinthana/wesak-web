@@ -591,7 +591,8 @@ article {
     #slideshow2,
     #slideshow3,
     #slideshow4,
-    #slideshow5 {
+    #slideshow5,
+    #slideshow6 {
   /* margin: 80px auto; */
   position: relative;
   width: 100%;
@@ -614,7 +615,10 @@ article {
   position: relative;
 
 }
+#slideshow6 > div {
+  position: relative;
 
+}
 
 #slideshow1 > div {
   position: relative;
@@ -801,6 +805,12 @@ article {
                 <div>
                   <img src="../img/vesakKudu/new/Chandima/2.png">
                 </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Chandima/3.png">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Chandima/4.png">
+                </div>
               </div>
               <h3>චන්දිමා සෙනරත්</h3>
             </article>
@@ -826,6 +836,29 @@ article {
               </div>
               <h3>හරිඳු ජයවර්ධන</h3>
             </article>
+
+            <article>
+              <div id="slideshow6">
+                <div>
+                  <img src="../img/vesakKudu/new/Pavithra/1.JPG">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Pavithra/2.JPG">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Pavithra/3.JPG">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Pavithra/4.JPG">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Pavithra/5.JPG">
+                </div>
+              </div>
+              <h3>පවිත්‍ර සිල්වා</h3>
+            </article>
+
+
             <article>
               <div id="slideshow4">
                 <div>
@@ -1215,6 +1248,7 @@ article {
     $("#slideshow3 > div:gt(0)").hide();
     $("#slideshow4 > div:gt(0)").hide();
     $("#slideshow5 > div:gt(0)").hide();
+    $("#slideshow6 > div:gt(0)").hide();
 
 setInterval(function() {
   $('#slideshow > div:first')
@@ -1268,6 +1302,15 @@ setInterval(function() {
     .fadeIn(3000)
     .end()
     .appendTo('#slideshow5');
+}, 8000);
+
+setInterval(function() {
+  $('#slideshow6 > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(3000)
+    .end()
+    .appendTo('#slideshow6');
 }, 8000);
 </script>
 </body>
