@@ -593,7 +593,8 @@ article {
     #slideshow4,
     #slideshow5,
     #slideshow6,
-    #slideshow7 {
+    #slideshow7,
+    #slideshow8 {
   /* margin: 80px auto; */
   position: relative;
   width: 100%;
@@ -634,6 +635,9 @@ article {
   position: relative;
 }
 #slideshow3 > div {
+  position: relative;
+}
+#slideshow8 > div {
   position: relative;
 }
   </style>
@@ -919,6 +923,22 @@ article {
               <h3>නිමන්දි නදීශා</h3>
             </article>
 
+            <article>
+              <div id="slideshow8">
+                <div>
+                  <img src="../img/vesakKudu/new/Kalpani/1.png">
+                </div>
+                <div>
+                  <img src="../img/vesakKudu/new/Kalpani/2.png">
+                </div>
+              </div>
+              <h3>කල්පනී ජයසිංහ</h3>
+            </article>
+            <article>
+          
+              <img src="../img/vesakKudu/new/imasha/1.jpeg">
+              <h3>ගයන්ති ඉමාශා</h3>
+            </article>
             <article>
               <video playsinline autoplay loop muted class="responsive-iframe1" style="height: 100%;
               width: 100%;">
@@ -1275,6 +1295,7 @@ article {
     $("#slideshow5 > div:gt(0)").hide();
     $("#slideshow6 > div:gt(0)").hide();
     $("#slideshow7 > div:gt(0)").hide();
+    $("#slideshow8 > div:gt(0)").hide();
 
 setInterval(function() {
   $('#slideshow > div:first')
@@ -1346,6 +1367,15 @@ setInterval(function() {
     .fadeIn(3000)
     .end()
     .appendTo('#slideshow7');
+}, 8000);
+
+setInterval(function() {
+  $('#slideshow8 > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(3000)
+    .end()
+    .appendTo('#slideshow8');
 }, 8000);
 </script>
 </body>
